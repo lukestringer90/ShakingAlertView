@@ -8,6 +8,8 @@
 //
 
 #import "ShakingAlertView.h"
+#include <CommonCrypto/CommonDigest.h>
+#import "NSData+Base64.h"
 
 
 @interface ShakingAlertView ()
@@ -180,8 +182,14 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
+    unsigned char digest[CC_SHA1_DIGEST_LENGTH];
+    NSData *stringBytes = [textField.text dataUsingEncoding: NSUTF8StringEncoding]; /* or some other encoding */
+    CC_SHA1([stringBytes bytes], [stringBytes length], digest);
+    
+    NSString *hashedEnteredPassword = [stringBytes base64EncodedString];
+    
     // Check password
-    if ([textField.text isEqualToString:_password]) {
+    if ([hashedEnteredPassword isEqualToString:_password]) {
         
         // Hide keyboard
         [self.passwordField resignFirstResponder];
