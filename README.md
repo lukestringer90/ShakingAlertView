@@ -5,7 +5,7 @@ ShakingAlertView is a UIAlertView subclass with a password entry textfield. Inco
 
 ![screen](https://github.com/stringer630/ShakingAlertView/blob/master/screens/screen0.png?raw=true)
 
-[Video Demo](https://dl.dropbox.com/u/244003/ShakeAlertView_demo.mov)
+[Video Demo](https://github.com/stringer630/ShakingAlertView/blob/master/screens/video_demo.mov?raw=true)
 
 ## Usage
 
