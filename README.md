@@ -5,6 +5,8 @@ ShackingAlertView is a UIAlertView subclass with a password entry textfield. Inc
 
 ![screen](https://github.com/stringer630/ShackingAlertView/blob/master/screens/screen0.png?raw=true)
 
+[Video Demo](https://dl.dropbox.com/u/244003/ShakeAlertView_demo.mov)
+
 ## Usage
 
 Use ShackingAlertView just like UIAlertView.
