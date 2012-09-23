@@ -18,8 +18,8 @@
 		A33909EA160F17D80083C023 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909E8160F17D80083C023 /* ViewController_iPad.xib */; };
 		A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */; };
 		A33909F4160F18400083C023 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F2160F18400083C023 /* ModalViewController.m */; };
-		A33909F7160F18540083C023 /* ShackingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F6160F18540083C023 /* ShackingAlertView.m */; };
 		A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F8160F18630083C023 /* ModalViewController_iPad.xib */; };
+		A3E0B69F160F42E6001E7952 /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0B69E160F42E6001E7952 /* ShakingAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +40,9 @@
 		A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPhone.xib; sourceTree = "<group>"; };
 		A33909F1160F18400083C023 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		A33909F2160F18400083C023 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
-		A33909F5160F18540083C023 /* ShackingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShackingAlertView.h; sourceTree = "<group>"; };
-		A33909F6160F18540083C023 /* ShackingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShackingAlertView.m; sourceTree = "<group>"; };
 		A33909F8160F18630083C023 /* ModalViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPad.xib; sourceTree = "<group>"; };
+		A3E0B69D160F42E6001E7952 /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakingAlertView.h; sourceTree = "<group>"; };
+		A3E0B69E160F42E6001E7952 /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +135,8 @@
 		A33909FC160F18990083C023 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A33909F5160F18540083C023 /* ShackingAlertView.h */,
-				A33909F6160F18540083C023 /* ShackingAlertView.m */,
+				A3E0B69D160F42E6001E7952 /* ShakingAlertView.h */,
+				A3E0B69E160F42E6001E7952 /* ShakingAlertView.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 				A33909E1160F17D80083C023 /* AppDelegate.m in Sources */,
 				A33909E4160F17D80083C023 /* ViewController.m in Sources */,
 				A33909F4160F18400083C023 /* ModalViewController.m in Sources */,
-				A33909F7160F18540083C023 /* ShackingAlertView.m in Sources */,
+				A3E0B69F160F42E6001E7952 /* ShakingAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +335,7 @@
 				A33909EF160F17D80083C023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
