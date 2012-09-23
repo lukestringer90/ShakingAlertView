@@ -1,18 +1,18 @@
-ShackingAlertView
+ShakingAlertView
 ===================
 
-ShackingAlertView is a UIAlertView subclass with a password entry textfield. Incorrect password entry causes a "shake" animation similar to the OS X account login screen.
+ShakingAlertView is a UIAlertView subclass with a password entry textfield. Incorrect password entry causes a "shake" animation similar to the OS X account login screen.
 
-![screen](https://github.com/stringer630/ShackingAlertView/blob/master/screens/screen0.png?raw=true)
+![screen](https://github.com/stringer630/ShakingAlertView/blob/master/screens/screen0.png?raw=true)
 
 [Video Demo](https://dl.dropbox.com/u/244003/ShakeAlertView_demo.mov)
 
 ## Usage
 
-Use ShackingAlertView just like UIAlertView.
+Use ShakingAlertView just like UIAlertView.
 
 ```
-    ShackingAlertView *passwordAlert = [[ShackingAlertView alloc] initWithAlertTitle:@"Enter Password"
+    ShakingAlertView *passwordAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
                                                                         checkForPassword:@"pass"];
     
     [passwordAlert setCorrectPasswordBlock:^{

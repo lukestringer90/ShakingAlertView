@@ -1,26 +1,26 @@
 //
-//  ShackingAlertView.m
+//  ShakingAlertView.m
 //
 //  Created by Luke on 21/09/2012.
 //  Copyright (c) 2012 Luke Stringer. All rights reserved.
 //
-//  https://github.com/stringer630/ShackingAlertView
+//  https://github.com/stringer630/ShakingAlertView
 //
 
-#import "ShackingAlertView.h"
+#import "ShakingAlertView.h"
 
 
-@interface ShackingAlertView ()
+@interface ShakingAlertView ()
 @property (nonatomic, strong) UITextField *passwordField;
 @end
 
 // Enum for alert view button index
 typedef enum {
-    ShackingAlertViewButtonIndexDismiss = 0,
-    ShackingAlertViewButtonIndexSuccess = 10
-} ShackingAlertViewButtonIndex;
+    ShakingAlertViewButtonIndexDismiss = 0,
+    ShakingAlertViewButtonIndexSuccess = 10
+} ShakingAlertViewButtonIndex;
 
-@implementation ShackingAlertView
+@implementation ShakingAlertView
 
 #pragma mark - Constructors
 
@@ -144,7 +144,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
             [self.passwordField resignFirstResponder];
             
             // Dismiss with success
-            [alertView dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexSuccess animated:YES];
+            [alertView dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexSuccess animated:YES];
             _correctPasswordBlock();
             
         }
@@ -160,15 +160,15 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 // Overide to customise when alert is dimsissed
 - (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex animated:(BOOL)animated {
 
-    // Only dismiss for ShackingAlertViewButtonIndexDismiss or ShackingAlertViewButtonIndexSuccess
+    // Only dismiss for ShakingAlertViewButtonIndexDismiss or ShakingAlertViewButtonIndexSuccess
     // This means we don't dissmis for the case where "Enter" button is pressed and password is incorrect
     switch (buttonIndex) {
-        case ShackingAlertViewButtonIndexDismiss:
-            [super dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexDismiss animated:animated];
+        case ShakingAlertViewButtonIndexDismiss:
+            [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
             _dismissedWithoutPasswordBlock();
             break;
-        case ShackingAlertViewButtonIndexSuccess:
-            [super dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexDismiss animated:animated];
+        case ShakingAlertViewButtonIndexSuccess:
+            [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
             _correctPasswordBlock();
             break;
         default:
@@ -187,7 +187,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
         [self.passwordField resignFirstResponder];
         
         // Dismiss with success
-        [self dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexSuccess animated:YES];
+        [self dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexSuccess animated:YES];
         
         return YES;
     }

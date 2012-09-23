@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  ShackingAlertView
+//  ShakingAlertView
 //
 //  Created by Luke on 21/09/2012.
 //  Copyright (c) 2012 Luke Stringer. All rights reserved.
@@ -37,7 +37,7 @@
 - (IBAction)loginButtonTapped:(id)sender {
     
     // Make the alert
-    ShackingAlertView *passwordAlert = [[ShackingAlertView alloc] initWithAlertTitle:@"Enter Password"
+    ShakingAlertView *passwordAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
                                                                         checkForPassword:@"pass"];
     
     // Block to excute on sucess

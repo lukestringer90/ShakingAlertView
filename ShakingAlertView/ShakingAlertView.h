@@ -1,16 +1,16 @@
 //
-//  ShackingAlertView.h
+//  ShakingAlertView.h
 //
 //  Created by Luke on 21/09/2012.
 //  Copyright (c) 2012 Luke Stringer. All rights reserved.
 //
-//  https://github.com/stringer630/ShackingAlertView
+//  https://github.com/stringer630/ShakingAlertView
 //
 
 #import <UIKit/UIKit.h>
 
 
-@interface ShackingAlertView : UIAlertView <UITextFieldDelegate>
+@interface ShakingAlertView : UIAlertView <UITextFieldDelegate>
 
 @property (nonatomic, retain) NSString *password;
 
