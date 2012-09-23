@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A33909D1160F17D80083C023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
+		A33909D3160F17D80083C023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
+		A33909D5160F17D80083C023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D4160F17D80083C023 /* CoreGraphics.framework */; };
+		A33909DB160F17D80083C023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A33909D9160F17D80083C023 /* InfoPlist.strings */; };
+		A33909DD160F17D80083C023 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909DC160F17D80083C023 /* main.m */; };
+		A33909E1160F17D80083C023 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909E0160F17D80083C023 /* AppDelegate.m */; };
+		A33909E4160F17D80083C023 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909E3160F17D80083C023 /* ViewController.m */; };
+		A33909E7160F17D80083C023 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909E5160F17D80083C023 /* ViewController_iPhone.xib */; };
+		A33909EA160F17D80083C023 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909E8160F17D80083C023 /* ViewController_iPad.xib */; };
+		A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */; };
+		A33909F4160F18400083C023 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F2160F18400083C023 /* ModalViewController.m */; };
+		A33909F7160F18540083C023 /* ShackingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F6160F18540083C023 /* ShackingAlertView.m */; };
+		A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F8160F18630083C023 /* ModalViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A33909CC160F17D80083C023 /* ShakingAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakingAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33909D0160F17D80083C023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A33909D2160F17D80083C023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A33909D4160F17D80083C023 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A33909D8160F17D80083C023 /* ShakingAlertView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakingAlertView-Info.plist"; sourceTree = "<group>"; };
+		A33909DA160F17D80083C023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A33909DC160F17D80083C023 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A33909DE160F17D80083C023 /* ShakingAlertView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShakingAlertView-Prefix.pch"; sourceTree = "<group>"; };
+		A33909DF160F17D80083C023 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A33909E0160F17D80083C023 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A33909E2160F17D80083C023 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A33909E3160F17D80083C023 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A33909E6160F17D80083C023 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		A33909E9160F17D80083C023 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPhone.xib; sourceTree = "<group>"; };
+		A33909F1160F18400083C023 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		A33909F2160F18400083C023 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		A33909F5160F18540083C023 /* ShackingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShackingAlertView.h; sourceTree = "<group>"; };
+		A33909F6160F18540083C023 /* ShackingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShackingAlertView.m; sourceTree = "<group>"; };
+		A33909F8160F18630083C023 /* ModalViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A33909C9160F17D80083C023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33909D1160F17D80083C023 /* UIKit.framework in Frameworks */,
+				A33909D3160F17D80083C023 /* Foundation.framework in Frameworks */,
+				A33909D5160F17D80083C023 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A33909C1160F17D80083C023 = {
+			isa = PBXGroup;
+			children = (
+				A33909D6160F17D80083C023 /* ShakingAlertView */,
+				A33909CF160F17D80083C023 /* Frameworks */,
+				A33909CD160F17D80083C023 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A33909CD160F17D80083C023 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A33909CC160F17D80083C023 /* ShakingAlertView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A33909CF160F17D80083C023 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A33909D0160F17D80083C023 /* UIKit.framework */,
+				A33909D2160F17D80083C023 /* Foundation.framework */,
+				A33909D4160F17D80083C023 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A33909D6160F17D80083C023 /* ShakingAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A33909DF160F17D80083C023 /* AppDelegate.h */,
+				A33909E0160F17D80083C023 /* AppDelegate.m */,
+				A33909FC160F18990083C023 /* Components */,
+				A33909FB160F18920083C023 /* View Controllers */,
+				A33909FA160F18850083C023 /* XIB */,
+				A33909D7160F17D80083C023 /* Supporting Files */,
+			);
+			path = ShakingAlertView;
+			sourceTree = "<group>";
+		};
+		A33909D7160F17D80083C023 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A33909D8160F17D80083C023 /* ShakingAlertView-Info.plist */,
+				A33909D9160F17D80083C023 /* InfoPlist.strings */,
+				A33909DC160F17D80083C023 /* main.m */,
+				A33909DE160F17D80083C023 /* ShakingAlertView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A33909FA160F18850083C023 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				A33909E5160F17D80083C023 /* ViewController_iPhone.xib */,
+				A33909E8160F17D80083C023 /* ViewController_iPad.xib */,
+				A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */,
+				A33909F8160F18630083C023 /* ModalViewController_iPad.xib */,
+			);
+			name = XIB;
+			sourceTree = "<group>";
+		};
+		A33909FB160F18920083C023 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A33909E2160F17D80083C023 /* ViewController.h */,
+				A33909E3160F17D80083C023 /* ViewController.m */,
+				A33909F1160F18400083C023 /* ModalViewController.h */,
+				A33909F2160F18400083C023 /* ModalViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A33909FC160F18990083C023 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A33909F5160F18540083C023 /* ShackingAlertView.h */,
+				A33909F6160F18540083C023 /* ShackingAlertView.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A33909CB160F17D80083C023 /* ShakingAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33909ED160F17D80083C023 /* Build configuration list for PBXNativeTarget "ShakingAlertView" */;
+			buildPhases = (
+				A33909C8160F17D80083C023 /* Sources */,
+				A33909C9160F17D80083C023 /* Frameworks */,
+				A33909CA160F17D80083C023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShakingAlertView;
+			productName = ShakingAlertView;
+			productReference = A33909CC160F17D80083C023 /* ShakingAlertView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A33909C3160F17D80083C023 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Luke Stringer";
+			};
+			buildConfigurationList = A33909C6160F17D80083C023 /* Build configuration list for PBXProject "ShakingAlertView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A33909C1160F17D80083C023;
+			productRefGroup = A33909CD160F17D80083C023 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A33909CB160F17D80083C023 /* ShakingAlertView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A33909CA160F17D80083C023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33909DB160F17D80083C023 /* InfoPlist.strings in Resources */,
+				A33909E7160F17D80083C023 /* ViewController_iPhone.xib in Resources */,
+				A33909EA160F17D80083C023 /* ViewController_iPad.xib in Resources */,
+				A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */,
+				A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A33909C8160F17D80083C023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33909DD160F17D80083C023 /* main.m in Sources */,
+				A33909E1160F17D80083C023 /* AppDelegate.m in Sources */,
+				A33909E4160F17D80083C023 /* ViewController.m in Sources */,
+				A33909F4160F18400083C023 /* ModalViewController.m in Sources */,
+				A33909F7160F18540083C023 /* ShackingAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A33909D9160F17D80083C023 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33909DA160F17D80083C023 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A33909E5160F17D80083C023 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33909E6160F17D80083C023 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		A33909E8160F17D80083C023 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33909E9160F17D80083C023 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A33909EB160F17D80083C023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A33909EC160F17D80083C023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A33909EE160F17D80083C023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakingAlertView/ShakingAlertView-Prefix.pch";
+				INFOPLIST_FILE = "ShakingAlertView/ShakingAlertView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A33909EF160F17D80083C023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakingAlertView/ShakingAlertView-Prefix.pch";
+				INFOPLIST_FILE = "ShakingAlertView/ShakingAlertView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A33909C6160F17D80083C023 /* Build configuration list for PBXProject "ShakingAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33909EB160F17D80083C023 /* Debug */,
+				A33909EC160F17D80083C023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33909ED160F17D80083C023 /* Build configuration list for PBXNativeTarget "ShakingAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33909EE160F17D80083C023 /* Debug */,
+				A33909EF160F17D80083C023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A33909C3160F17D80083C023 /* Project object */;
+}
