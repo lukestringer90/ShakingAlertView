@@ -4,6 +4,8 @@
 //  Created by Luke on 21/09/2012.
 //  Copyright (c) 2012 Luke Stringer. All rights reserved.
 //
+//  https://github.com/stringer630/ShackingAlertView
+//
 
 #import "ShackingAlertView.h"
 
@@ -14,9 +16,9 @@
 
 // Enum for alert view button index
 typedef enum {
-    LSPasswordAlertViewButtonIndexDismiss = 0,
-    LSPasswordAlertViewButtonIndexSuccess = 10
-} LSPasswordAlertViewButtonIndex;
+    ShackingAlertViewButtonIndexDismiss = 0,
+    ShackingAlertViewButtonIndexSuccess = 10
+} ShackingAlertViewButtonIndex;
 
 @implementation ShackingAlertView
 
@@ -26,7 +28,7 @@ typedef enum {
         checkForPassword:(NSString *)password{
     
     self = [super initWithTitle:title     
-                        message:@"---blank---"
+                        message:@"---blank---" // password field will go here
                        delegate:self 
               cancelButtonTitle:@"Cancel" 
               otherButtonTitles:@"Enter", nil];
@@ -93,7 +95,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
     _passwordField.text = nil;
     
     // Animate the alert to show that the entered string was wrong
-    // "Shakes it's head" similar to OS X login screen
+    // "Shakes" similar to OS X login screen
     CGAffineTransform moveRight = CGAffineTransformTranslate(CGAffineTransformIdentity, 20, 0);
     CGAffineTransform moveLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -20, 0);
     CGAffineTransform resetTransform = CGAffineTransformTranslate(CGAffineTransformIdentity, 0, 0);
@@ -133,7 +135,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    // If "Enter" button pressed on alert view check password
+    // If "Enter" button pressed on alert view then check password
     if (buttonIndex == 1) {
         
         if ([_passwordField.text isEqualToString:_password]) {
@@ -142,7 +144,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
             [self.passwordField resignFirstResponder];
             
             // Dismiss with success
-            [alertView dismissWithClickedButtonIndex:LSPasswordAlertViewButtonIndexSuccess animated:YES];
+            [alertView dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexSuccess animated:YES];
             _correctPasswordBlock();
             
         }
@@ -158,15 +160,15 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 // Overide to customise when alert is dimsissed
 - (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex animated:(BOOL)animated {
 
-    // Only dismiss for LSPasswordAlertViewButtonIndexDismiss or LSPasswordAlertViewButtonIndexSuccess
-    // This means we don't dissmis for the case where "Enter" button is pressed and we need to animate
+    // Only dismiss for ShackingAlertViewButtonIndexDismiss or ShackingAlertViewButtonIndexSuccess
+    // This means we don't dissmis for the case where "Enter" button is pressed and password is incorrect
     switch (buttonIndex) {
-        case LSPasswordAlertViewButtonIndexDismiss:
-            [super dismissWithClickedButtonIndex:LSPasswordAlertViewButtonIndexDismiss animated:animated];
+        case ShackingAlertViewButtonIndexDismiss:
+            [super dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexDismiss animated:animated];
             _dismissedWithoutPasswordBlock();
             break;
-        case LSPasswordAlertViewButtonIndexSuccess:
-            [super dismissWithClickedButtonIndex:LSPasswordAlertViewButtonIndexDismiss animated:animated];
+        case ShackingAlertViewButtonIndexSuccess:
+            [super dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexDismiss animated:animated];
             _correctPasswordBlock();
             break;
         default:
@@ -185,7 +187,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
         [self.passwordField resignFirstResponder];
         
         // Dismiss with success
-        [self dismissWithClickedButtonIndex:LSPasswordAlertViewButtonIndexSuccess animated:YES];
+        [self dismissWithClickedButtonIndex:ShackingAlertViewButtonIndexSuccess animated:YES];
         
         return YES;
     }
