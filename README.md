@@ -28,3 +28,9 @@ Use ShackingAlertView just like UIAlertView.
 ```
 
 Rather than using a delegate, pass the instance a completion block to be executed for correct password entry and alert dismissal.
+
+---
+
+### Author
+
+Follow me on twitter: [lukestringer90](twitter.com/lukestringer90)
