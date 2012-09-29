@@ -1,6 +1,4 @@
-project.xcworkspace/
-*.xcuserstate
+*.xcodeproj/project.xcworkspace/*
 
-*.xcuserstate
 
 .DS_Store
