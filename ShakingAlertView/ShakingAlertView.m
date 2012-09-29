@@ -57,14 +57,14 @@ typedef enum {
 - (id)initWithAlertTitle:(NSString *)title
         checkForPassword:(NSString *)password
    usingHashingTechnique:(HashTechnique)hashingTechnique
-    correctPasswordBlock:(void(^)())correctPasswordBlock
-dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
+       onCorrectPassword:(void(^)())correctPasswordBlock
+onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
 
     
     self = [self initWithAlertTitle:title checkForPassword:password usingHashingTechnique:hashingTechnique];
     if (self) {
-        self.correctPasswordBlock = correctPasswordBlock;
-        self.dismissedWithoutPasswordBlock = dismissedWithoutPasswordBlock;
+        self.onCorrectPassword = correctPasswordBlock;
+        self.onDismissalWithoutPassword = dismissalWithoutPasswordBlock;
     }
 
     
@@ -161,7 +161,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
             
             // Dismiss with success
             [alertView dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexSuccess animated:YES];
-            _correctPasswordBlock();
+            _onCorrectPassword();
             
         }
         
@@ -181,11 +181,11 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
     switch (buttonIndex) {
         case ShakingAlertViewButtonIndexDismiss:
             [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
-            _dismissedWithoutPasswordBlock();
+            _onDismissalWithoutPassword();
             break;
         case ShakingAlertViewButtonIndexSuccess:
             [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
-            _correctPasswordBlock();
+            _onDismissalWithoutPassword();
             break;
         default:
             break;
@@ -266,6 +266,8 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 - (void)dealloc {
     [_passwordField release];
     [_password release];
+    [_onCorrectPassword release];
+    [_onDismissalWithoutPassword release];
     
     [super dealloc];
 }

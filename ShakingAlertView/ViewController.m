@@ -42,7 +42,7 @@
                                                              usingHashingTechnique:HashTechniqueNone];
     
     // Block to excute on sucess
-    [passwordAlert setCorrectPasswordBlock:^{
+    [passwordAlert setOnCorrectPassword:^{
         
         // Show a modal view
         
@@ -65,7 +65,7 @@
     }];
     
     // Block to execute on alert dismissal
-    [passwordAlert setDismissedWithoutPasswordBlock:^{
+    [passwordAlert setOnDismissalWithoutPassword:^{
 
         // Show regular UIAlertView to give them another go
         UIAlertView *alert = [[UIAlertView alloc]

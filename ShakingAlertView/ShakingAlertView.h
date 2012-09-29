@@ -13,7 +13,6 @@ typedef enum {
     HashTechniqueNone   = 1,
     HashTechniqueSHA1   = 2,
     HashTechniqueMD5    = 3
-    
 } HashTechnique;
 
 
@@ -21,8 +20,8 @@ typedef enum {
 
 @property (nonatomic, retain) NSString *password;
 
-@property (nonatomic, copy) void(^correctPasswordBlock)();
-@property (nonatomic, copy) void(^dismissedWithoutPasswordBlock)();
+@property (nonatomic, copy) void(^onCorrectPassword)();
+@property (nonatomic, copy) void(^onDismissalWithoutPassword)();
 
 @property (assign) HashTechnique hashTechnique;
 
@@ -36,8 +35,8 @@ typedef enum {
 - (id)initWithAlertTitle:(NSString *)title
         checkForPassword:(NSString *)password
    usingHashingTechnique:(HashTechnique)hashingTechnique
-    correctPasswordBlock:(void(^)())correctPasswordBlock
-dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock;
+    onCorrectPassword:(void(^)())correctPasswordBlock
+onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock;
 
 @end    
 
