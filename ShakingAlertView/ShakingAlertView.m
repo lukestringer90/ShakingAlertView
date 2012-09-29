@@ -131,7 +131,7 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             [UIView animateWithDuration:0.1 animations:^{
                 
-                // Translate to left
+                // Translate left
                 self.transform = moveLeft;
                 
             } completion:^(BOOL finished) {
@@ -152,7 +152,7 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     // If "Enter" button pressed on alert view then check password
-    if (buttonIndex == 1) {
+    if (buttonIndex == alertView.firstOtherButtonIndex) {
         
         if ([self enteredTextIsCorrect]) {
             
