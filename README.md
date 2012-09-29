@@ -33,4 +33,4 @@ Rather than using a delegate, pass the instance a completion block to be execute
 
 ### Author
 
-Follow me on twitter: [lukestringer90](twitter.com/lukestringer90)
+Follow me on twitter: [lukestringer90](http://twitter.com/lukestringer90)
