@@ -140,7 +140,7 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
     // If "Enter" button pressed on alert view then check password
     if (buttonIndex == 1) {
         
-        if ([_passwordField.text isEqualToString:_password]) {
+        if ([self enteredTextIsCorrect]) {
             
             // Hide keyboard
             [self.passwordField resignFirstResponder];
@@ -180,16 +180,9 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 }
 
 #pragma mark - UITextFieldDelegate
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    unsigned char digest[CC_SHA1_DIGEST_LENGTH];
-    NSData *stringBytes = [textField.text dataUsingEncoding: NSUTF8StringEncoding]; /* or some other encoding */
-    CC_SHA1([stringBytes bytes], [stringBytes length], digest);
-    
-    NSString *hashedEnteredPassword = [stringBytes base64EncodedString];
-    
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {    
     // Check password
-    if ([hashedEnteredPassword isEqualToString:_password]) {
+    if ([self enteredTextIsCorrect]) {
         
         // Hide keyboard
         [self.passwordField resignFirstResponder];
@@ -203,6 +196,17 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
     // Password is incorrect to so animate
     [self animateIncorrectPassword];
     return NO;
+}
+
+- (BOOL)enteredTextIsCorrect {
+    unsigned char digest[CC_SHA1_DIGEST_LENGTH];
+    NSData *stringBytes = [_passwordField.text dataUsingEncoding: NSUTF8StringEncoding]; /* or some other encoding */
+    CC_SHA1([stringBytes bytes], [stringBytes length], digest);
+    
+    NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
+    NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
+    
+    return [hashedEnteredPassword isEqualToString:_password];
 }
 
 #pragma mark - Memory Managment
