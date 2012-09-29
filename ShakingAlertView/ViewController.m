@@ -38,7 +38,8 @@
     
     // Make the alert
     ShakingAlertView *passwordAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
-                                                                        checkForPassword:@"W6ph5Mm5Pz8GgiULbPgzG37mj9g="];
+                                                                        checkForPassword:@"password"
+                                                             usingHashingTechnique:HashTechniqueNone];
     
     // Block to excute on sucess
     [passwordAlert setCorrectPasswordBlock:^{

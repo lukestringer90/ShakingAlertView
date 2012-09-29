@@ -36,6 +36,7 @@ typedef enum {
               otherButtonTitles:@"Enter", nil];
     if (self) {
         self.password = password;
+        self.hashTechnique = HashTechniqueNone; // use no hashing by default
     }
 
     return self;
@@ -43,11 +44,24 @@ typedef enum {
 
 - (id)initWithAlertTitle:(NSString *)title
         checkForPassword:(NSString *)password
+   usingHashingTechnique:(HashTechnique)hashingTechnique {
+    
+    self = [self initWithAlertTitle:title checkForPassword:password];
+    if (self) {
+        self.hashTechnique = hashingTechnique;
+    }
+    return self;
+    
+}
+
+- (id)initWithAlertTitle:(NSString *)title
+        checkForPassword:(NSString *)password
+   usingHashingTechnique:(HashTechnique)hashingTechnique
     correctPasswordBlock:(void(^)())correctPasswordBlock
 dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 
     
-    self = [self initWithAlertTitle:title checkForPassword:password];
+    self = [self initWithAlertTitle:title checkForPassword:password usingHashingTechnique:hashingTechnique];
     if (self) {
         self.correctPasswordBlock = correctPasswordBlock;
         self.dismissedWithoutPasswordBlock = dismissedWithoutPasswordBlock;
@@ -199,14 +213,53 @@ dismissedWithoutPasswordBlock:(void(^)())dismissedWithoutPasswordBlock {
 }
 
 - (BOOL)enteredTextIsCorrect {
-    unsigned char digest[CC_SHA1_DIGEST_LENGTH];
-    NSData *stringBytes = [_passwordField.text dataUsingEncoding: NSUTF8StringEncoding]; /* or some other encoding */
-    CC_SHA1([stringBytes bytes], [stringBytes length], digest);
+    switch (_hashTechnique) {
+            
+        // No hashing algorithm used
+        case HashTechniqueNone:
+            return [_passwordField.text isEqualToString:_password];
+            break;
+        
+            
+        // SHA1 used
+        case HashTechniqueSHA1: {
+            
+            unsigned char digest[CC_SHA1_DIGEST_LENGTH];
+            NSData *stringBytes = [_passwordField.text dataUsingEncoding: NSUTF8StringEncoding];
+            CC_SHA1([stringBytes bytes], [stringBytes length], digest);
+            
+            NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
+            NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
+            
+            return [hashedEnteredPassword isEqualToString:_password];
+
+        }
+            break;
+        
+        
+        // MD5 used    
+        case HashTechniqueMD5: {
+            
+            unsigned char digest[CC_MD5_DIGEST_LENGTH];
+            NSData *stringBytes = [_passwordField.text dataUsingEncoding: NSUTF8StringEncoding];
+            CC_MD5([stringBytes bytes], [stringBytes length], digest);
+            
+            NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_MD5_DIGEST_LENGTH];
+            NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
+            
+            return [hashedEnteredPassword isEqualToString:_password];
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
     
-    NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
-    NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
     
-    return [hashedEnteredPassword isEqualToString:_password];
+    // To stop Xcode complaining return NO by default
+    return NO;
+    
 }
 
 #pragma mark - Memory Managment
