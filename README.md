@@ -45,11 +45,16 @@ ShakingAlertView uses the [Common Crypto](https://developer.apple.com/library/ma
 The hashing algorithm to use is defined by an enum and passed into the constructor.
 ```
 typedef enum {
-HashTechniqueNone,
+	HashTechniqueNone,
     HashTechniqueSHA1,
     HashTechniqueMD5
 } HashTechnique;
 ```
+
+`HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` constructor.
+
+## Acknowledgements
+`NSData+Base64.h/m` and `b64.h/m` from [aqtoolkit](https://github.com/AlanQuatermain/aqtoolkit) by [AlanQuatermain](https://github.com/AlanQuatermain)
 
 ---
 
