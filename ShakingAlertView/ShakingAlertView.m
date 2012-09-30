@@ -44,6 +44,22 @@ typedef enum {
 
 - (id)initWithAlertTitle:(NSString *)title
         checkForPassword:(NSString *)password
+       onCorrectPassword:(void(^)())correctPasswordBlock
+onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
+    
+    self = [self initWithAlertTitle:title checkForPassword:password];
+    if (self) {
+        self.onCorrectPassword = correctPasswordBlock;
+        self.onDismissalWithoutPassword = dismissalWithoutPasswordBlock;
+    }
+    
+    
+    return self;
+    
+}
+
+- (id)initWithAlertTitle:(NSString *)title
+        checkForPassword:(NSString *)password
    usingHashingTechnique:(HashTechnique)hashingTechnique {
     
     self = [self initWithAlertTitle:title checkForPassword:password];

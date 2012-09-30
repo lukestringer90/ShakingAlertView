@@ -25,9 +25,18 @@ typedef enum {
 
 @property (assign) HashTechnique hashTechnique;
 
+
+// Constructors for plaintext password
 - (id)initWithAlertTitle:(NSString *)title
         checkForPassword:(NSString *)password;
 
+- (id)initWithAlertTitle:(NSString *)title
+        checkForPassword:(NSString *)password
+       onCorrectPassword:(void(^)())correctPasswordBlock
+onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock;
+
+
+// Constructors for hashed passwords
 - (id)initWithAlertTitle:(NSString *)title
         checkForPassword:(NSString *)password
    usingHashingTechnique:(HashTechnique)hashingTechnique;
