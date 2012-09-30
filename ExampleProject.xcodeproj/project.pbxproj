@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A333DC931618989E0086B76B /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A333DC921618989E0086B76B /* ShakingAlertView.m */; };
 		A33909D1160F17D80083C023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
 		A33909D3160F17D80083C023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
 		A33909D5160F17D80083C023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D4160F17D80083C023 /* CoreGraphics.framework */; };
@@ -19,20 +20,21 @@
 		A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */; };
 		A33909F4160F18400083C023 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F2160F18400083C023 /* ModalViewController.m */; };
 		A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F8160F18630083C023 /* ModalViewController_iPad.xib */; };
-		A3E0B69F160F42E6001E7952 /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0B69E160F42E6001E7952 /* ShakingAlertView.m */; };
 		A3E0B6C2160F4550001E7952 /* b64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0B6BF160F4550001E7952 /* b64.m */; };
 		A3E0B6C3160F4550001E7952 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0B6C1160F4550001E7952 /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A33909CC160F17D80083C023 /* ShakingAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakingAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A333DC911618989E0086B76B /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakingAlertView.h; sourceTree = "<group>"; };
+		A333DC921618989E0086B76B /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertView.m; sourceTree = "<group>"; };
+		A33909CC160F17D80083C023 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33909D0160F17D80083C023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A33909D2160F17D80083C023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A33909D4160F17D80083C023 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A33909D8160F17D80083C023 /* ShakingAlertView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakingAlertView-Info.plist"; sourceTree = "<group>"; };
+		A33909D8160F17D80083C023 /* ExampleProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleProject-Info.plist"; sourceTree = "<group>"; };
 		A33909DA160F17D80083C023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A33909DC160F17D80083C023 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A33909DE160F17D80083C023 /* ShakingAlertView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShakingAlertView-Prefix.pch"; sourceTree = "<group>"; };
+		A33909DE160F17D80083C023 /* ExampleProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExampleProject-Prefix.pch"; sourceTree = "<group>"; };
 		A33909DF160F17D80083C023 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A33909E0160F17D80083C023 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A33909E2160F17D80083C023 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -43,8 +45,6 @@
 		A33909F1160F18400083C023 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		A33909F2160F18400083C023 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		A33909F8160F18630083C023 /* ModalViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPad.xib; sourceTree = "<group>"; };
-		A3E0B69D160F42E6001E7952 /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakingAlertView.h; sourceTree = "<group>"; };
-		A3E0B69E160F42E6001E7952 /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertView.m; sourceTree = "<group>"; };
 		A3E0B6BE160F4550001E7952 /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b64.h; sourceTree = "<group>"; };
 		A3E0B6BF160F4550001E7952 /* b64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = b64.m; sourceTree = "<group>"; };
 		A3E0B6C0160F4550001E7952 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		A33909C1160F17D80083C023 = {
 			isa = PBXGroup;
 			children = (
-				A33909D6160F17D80083C023 /* ShakingAlertView */,
+				A33909D6160F17D80083C023 /* ExampleProject */,
 				A33909CF160F17D80083C023 /* Frameworks */,
 				A33909CD160F17D80083C023 /* Products */,
 			);
@@ -77,7 +77,7 @@
 		A33909CD160F17D80083C023 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A33909CC160F17D80083C023 /* ShakingAlertView.app */,
+				A33909CC160F17D80083C023 /* ExampleProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,7 +92,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A33909D6160F17D80083C023 /* ShakingAlertView */ = {
+		A33909D6160F17D80083C023 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
 				A33909DF160F17D80083C023 /* AppDelegate.h */,
@@ -102,16 +102,16 @@
 				A33909FA160F18850083C023 /* XIB */,
 				A33909D7160F17D80083C023 /* Supporting Files */,
 			);
-			path = ShakingAlertView;
+			path = ExampleProject;
 			sourceTree = "<group>";
 		};
 		A33909D7160F17D80083C023 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A33909D8160F17D80083C023 /* ShakingAlertView-Info.plist */,
+				A33909D8160F17D80083C023 /* ExampleProject-Info.plist */,
 				A33909D9160F17D80083C023 /* InfoPlist.strings */,
 				A33909DC160F17D80083C023 /* main.m */,
-				A33909DE160F17D80083C023 /* ShakingAlertView-Prefix.pch */,
+				A33909DE160F17D80083C023 /* ExampleProject-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 		A33909FC160F18990083C023 /* ShakingAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				A3E0B69D160F42E6001E7952 /* ShakingAlertView.h */,
-				A3E0B69E160F42E6001E7952 /* ShakingAlertView.m */,
 				A3E0B6C5160F4555001E7952 /* Crypt */,
+				A333DC911618989E0086B76B /* ShakingAlertView.h */,
+				A333DC921618989E0086B76B /* ShakingAlertView.m */,
 			);
 			name = ShakingAlertView;
 			sourceTree = "<group>";
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A33909CB160F17D80083C023 /* ShakingAlertView */ = {
+		A33909CB160F17D80083C023 /* ExampleProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A33909ED160F17D80083C023 /* Build configuration list for PBXNativeTarget "ShakingAlertView" */;
+			buildConfigurationList = A33909ED160F17D80083C023 /* Build configuration list for PBXNativeTarget "ExampleProject" */;
 			buildPhases = (
 				A33909C8160F17D80083C023 /* Sources */,
 				A33909C9160F17D80083C023 /* Frameworks */,
@@ -174,9 +174,9 @@
 			);
 			dependencies = (
 			);
-			name = ShakingAlertView;
-			productName = ShakingAlertView;
-			productReference = A33909CC160F17D80083C023 /* ShakingAlertView.app */;
+			name = ExampleProject;
+			productName = ExampleProject;
+			productReference = A33909CC160F17D80083C023 /* ExampleProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +188,7 @@
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Luke Stringer";
 			};
-			buildConfigurationList = A33909C6160F17D80083C023 /* Build configuration list for PBXProject "ShakingAlertView" */;
+			buildConfigurationList = A33909C6160F17D80083C023 /* Build configuration list for PBXProject "ExampleProject" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -200,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A33909CB160F17D80083C023 /* ShakingAlertView */,
+				A33909CB160F17D80083C023 /* ExampleProject */,
 			);
 		};
 /* End PBXProject section */
@@ -229,9 +229,9 @@
 				A33909E1160F17D80083C023 /* AppDelegate.m in Sources */,
 				A33909E4160F17D80083C023 /* ViewController.m in Sources */,
 				A33909F4160F18400083C023 /* ModalViewController.m in Sources */,
-				A3E0B69F160F42E6001E7952 /* ShakingAlertView.m in Sources */,
 				A3E0B6C2160F4550001E7952 /* b64.m in Sources */,
 				A3E0B6C3160F4550001E7952 /* NSData+Base64.m in Sources */,
+				A333DC931618989E0086B76B /* ShakingAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,8 +318,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ShakingAlertView/ShakingAlertView-Prefix.pch";
-				INFOPLIST_FILE = "ShakingAlertView/ShakingAlertView-Info.plist";
+				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
+				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -329,8 +329,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ShakingAlertView/ShakingAlertView-Prefix.pch";
-				INFOPLIST_FILE = "ShakingAlertView/ShakingAlertView-Info.plist";
+				GCC_PREFIX_HEADER = "ExampleProject/ExampleProject-Prefix.pch";
+				INFOPLIST_FILE = "ExampleProject/ExampleProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A33909C6160F17D80083C023 /* Build configuration list for PBXProject "ShakingAlertView" */ = {
+		A33909C6160F17D80083C023 /* Build configuration list for PBXProject "ExampleProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A33909EB160F17D80083C023 /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A33909ED160F17D80083C023 /* Build configuration list for PBXNativeTarget "ShakingAlertView" */ = {
+		A33909ED160F17D80083C023 /* Build configuration list for PBXNativeTarget "ExampleProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A33909EE160F17D80083C023 /* Debug */,
