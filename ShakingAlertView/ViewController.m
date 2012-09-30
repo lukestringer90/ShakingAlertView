@@ -37,12 +37,12 @@
 - (IBAction)plainTextLoginTapped:(id)sender {
     
     // Make the alert
-    ShakingAlertView *passwordAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
+    ShakingAlertView *shakingAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
                                                                   checkForPassword:@"password"
                                                              usingHashingTechnique:HashTechniqueNone];
     
     // Block to excute on sucess
-    [passwordAlert setOnCorrectPassword:^{
+    [shakingAlert setOnCorrectPassword:^{
         
         // Show a modal view
         
@@ -65,7 +65,7 @@
     }];
     
     // Block to execute on alert dismissal
-    [passwordAlert setOnDismissalWithoutPassword:^{
+    [shakingAlert setOnDismissalWithoutPassword:^{
         
         // Show regular UIAlertView to give them another go
         
@@ -81,14 +81,14 @@
     }];
     
     // Show and release
-    [passwordAlert show];
-    [passwordAlert release];
+    [shakingAlert show];
+    [shakingAlert release];
     
 }
 
 - (IBAction)sha1LoginTapped:(id)sender {
-    // Make the alert
-    ShakingAlertView *passwordAlert = [[ShakingAlertView alloc]
+   // Make the alert
+    ShakingAlertView *shakingAlert = [[ShakingAlertView alloc]
                                        initWithAlertTitle:@"Enter Password"
                                        checkForPassword:@"W6ph5Mm5Pz8GgiULbPgzG37mj9g=" //sha1 hash of 'password'
                                        usingHashingTechnique:HashTechniqueSHA1
@@ -125,15 +125,15 @@
     
     
     // Show and release
-    [passwordAlert show];
-    [passwordAlert release];
+    [shakingAlert show];
+    [shakingAlert release];
     
 }
 
 - (IBAction)md5LoginTaped:(id)sender {
     
     // Make the alert
-    ShakingAlertView *passwordAlert = [[ShakingAlertView alloc]
+    ShakingAlertView *shakingAlert = [[ShakingAlertView alloc]
                                        initWithAlertTitle:@"Enter Password"
                                        checkForPassword:@"X03MO1qnZdYdgyfeuILPmQ==" //md5 hash of 'password'
                                        usingHashingTechnique:HashTechniqueMD5
@@ -170,8 +170,8 @@
     
     
     // Show and release
-    [passwordAlert show];
-    [passwordAlert release];
+    [shakingAlert show];
+    [shakingAlert release];
 }
 
 #pragma mark - UIAlertViewDelegate
