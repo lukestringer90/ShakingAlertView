@@ -51,7 +51,7 @@ typedef enum {
 } HashTechnique;
 ```
 
-`HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` constructor.
+`HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` and `initWithAlertTitle:checkForPassword:onCorrectPassword:onDismissalWithoutPassword` constructors.
 
 ## Acknowledgements
 `NSData+Base64.h/m` and `b64.h/m` from [aqtoolkit](https://github.com/AlanQuatermain/aqtoolkit) by [AlanQuatermain](https://github.com/AlanQuatermain)
