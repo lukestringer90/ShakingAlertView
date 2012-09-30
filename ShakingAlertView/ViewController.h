@@ -12,6 +12,8 @@
 
 @interface ViewController : UIViewController <UIAlertViewDelegate>
 
-- (IBAction)loginButtonTapped:(id)sender;
+- (IBAction)plainTextLoginTapped:(id)sender;
+- (IBAction)sha1LoginTapped:(id)sender;
+- (IBAction)md5LoginTaped:(id)sender;
 
 @end
