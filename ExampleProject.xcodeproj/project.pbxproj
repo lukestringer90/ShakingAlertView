@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A333DC931618989E0086B76B /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A333DC921618989E0086B76B /* ShakingAlertView.m */; };
 		A33909D1160F17D80083C023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
 		A33909D3160F17D80083C023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
 		A33909D5160F17D80083C023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D4160F17D80083C023 /* CoreGraphics.framework */; };
@@ -20,13 +19,12 @@
 		A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */; };
 		A33909F4160F18400083C023 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F2160F18400083C023 /* ModalViewController.m */; };
 		A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F8160F18630083C023 /* ModalViewController_iPad.xib */; };
-		A3E0B6C2160F4550001E7952 /* b64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0B6BF160F4550001E7952 /* b64.m */; };
-		A3E0B6C3160F4550001E7952 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0B6C1160F4550001E7952 /* NSData+Base64.m */; };
+		A3F440691618C566003BADA3 /* b64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440641618C566003BADA3 /* b64.m */; };
+		A3F4406A1618C566003BADA3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440661618C566003BADA3 /* NSData+Base64.m */; };
+		A3F4406B1618C566003BADA3 /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440681618C566003BADA3 /* ShakingAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A333DC911618989E0086B76B /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakingAlertView.h; sourceTree = "<group>"; };
-		A333DC921618989E0086B76B /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertView.m; sourceTree = "<group>"; };
 		A33909CC160F17D80083C023 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33909D0160F17D80083C023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A33909D2160F17D80083C023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,10 +43,12 @@
 		A33909F1160F18400083C023 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		A33909F2160F18400083C023 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		A33909F8160F18630083C023 /* ModalViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPad.xib; sourceTree = "<group>"; };
-		A3E0B6BE160F4550001E7952 /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b64.h; sourceTree = "<group>"; };
-		A3E0B6BF160F4550001E7952 /* b64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = b64.m; sourceTree = "<group>"; };
-		A3E0B6C0160F4550001E7952 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		A3E0B6C1160F4550001E7952 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		A3F440631618C566003BADA3 /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = b64.h; path = ShakingAlertView/b64.h; sourceTree = SOURCE_ROOT; };
+		A3F440641618C566003BADA3 /* b64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = b64.m; path = ShakingAlertView/b64.m; sourceTree = SOURCE_ROOT; };
+		A3F440651618C566003BADA3 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "ShakingAlertView/NSData+Base64.h"; sourceTree = SOURCE_ROOT; };
+		A3F440661618C566003BADA3 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "ShakingAlertView/NSData+Base64.m"; sourceTree = SOURCE_ROOT; };
+		A3F440671618C566003BADA3 /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShakingAlertView.h; path = ShakingAlertView/ShakingAlertView.h; sourceTree = SOURCE_ROOT; };
+		A3F440681618C566003BADA3 /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakingAlertView.m; path = ShakingAlertView/ShakingAlertView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				A3E0B6C5160F4555001E7952 /* Crypt */,
-				A333DC911618989E0086B76B /* ShakingAlertView.h */,
-				A333DC921618989E0086B76B /* ShakingAlertView.m */,
+				A3F440671618C566003BADA3 /* ShakingAlertView.h */,
+				A3F440681618C566003BADA3 /* ShakingAlertView.m */,
 			);
 			name = ShakingAlertView;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 		A3E0B6C5160F4555001E7952 /* Crypt */ = {
 			isa = PBXGroup;
 			children = (
-				A3E0B6BE160F4550001E7952 /* b64.h */,
-				A3E0B6BF160F4550001E7952 /* b64.m */,
-				A3E0B6C0160F4550001E7952 /* NSData+Base64.h */,
-				A3E0B6C1160F4550001E7952 /* NSData+Base64.m */,
+				A3F440631618C566003BADA3 /* b64.h */,
+				A3F440641618C566003BADA3 /* b64.m */,
+				A3F440651618C566003BADA3 /* NSData+Base64.h */,
+				A3F440661618C566003BADA3 /* NSData+Base64.m */,
 			);
 			name = Crypt;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 				A33909E1160F17D80083C023 /* AppDelegate.m in Sources */,
 				A33909E4160F17D80083C023 /* ViewController.m in Sources */,
 				A33909F4160F18400083C023 /* ModalViewController.m in Sources */,
-				A3E0B6C2160F4550001E7952 /* b64.m in Sources */,
-				A3E0B6C3160F4550001E7952 /* NSData+Base64.m in Sources */,
-				A333DC931618989E0086B76B /* ShakingAlertView.m in Sources */,
+				A3F440691618C566003BADA3 /* b64.m in Sources */,
+				A3F4406A1618C566003BADA3 /* NSData+Base64.m in Sources */,
+				A3F4406B1618C566003BADA3 /* ShakingAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

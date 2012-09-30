@@ -35,6 +35,7 @@
 
 
 @interface ShakingAlertView ()
+// Private property as other instances shouldn't interact with this directly
 @property (nonatomic, strong) UITextField *passwordField;
 @end
 
