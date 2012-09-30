@@ -268,6 +268,7 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
             NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
+            [pwHashData release];
             
             return [hashedEnteredPassword isEqualToString:_password];
 
@@ -284,6 +285,7 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_MD5_DIGEST_LENGTH];
             NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
+            [pwHashData release];
             
             return [hashedEnteredPassword isEqualToString:_password];
             
