@@ -95,9 +95,9 @@
 		A33909D6160F17D80083C023 /* ShakingAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				A3E0B6C5160F4555001E7952 /* Crypt */,
 				A33909DF160F17D80083C023 /* AppDelegate.h */,
 				A33909E0160F17D80083C023 /* AppDelegate.m */,
+				A3E0B6C5160F4555001E7952 /* Crypt */,
 				A33909FC160F18990083C023 /* Components */,
 				A33909FB160F18920083C023 /* View Controllers */,
 				A33909FA160F18850083C023 /* XIB */,
