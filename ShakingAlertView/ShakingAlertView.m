@@ -179,11 +179,11 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
     // Only dismiss for ShakingAlertViewButtonIndexDismiss or ShakingAlertViewButtonIndexSuccess
     // This means we don't dissmis for the case where "Enter" button is pressed and password is incorrect
     switch (buttonIndex) {
-        case ShakingAlertViewButtonIndexDismiss:
-            [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
-            _onDismissalWithoutPassword();
-            break;
         case ShakingAlertViewButtonIndexSuccess:
+            [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
+            _onCorrectPassword();
+            break;
+        case ShakingAlertViewButtonIndexDismiss:
             [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
             _onDismissalWithoutPassword();
             break;
