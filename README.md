@@ -8,7 +8,7 @@ ShakingAlertView is a UIAlertView subclass with a password entry textfield. Inco
 [Video Demo](https://github.com/stringer630/ShakingAlertView/blob/master/screens/video_demo.mov?raw=true)
 
 ## Usage
-### Plain text password
+### Plaintext password
 
 Use ShakingAlertView just like UIAlertView. For a checking a plain text password:
 
@@ -52,7 +52,7 @@ typedef enum {
 } HashTechnique;
 ```
 
-`HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` and `initWithAlertTitle:checkForPassword:onCorrectPassword:onDismissalWithoutPassword` constructors.
+`HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` and `initWithAlertTitle:checkForPassword:onCorrectPassword:onDismissalWithoutPassword` constructors. Here the entered string is compared with given plaintext password using a simple `isEqualToString:`  evaluation.
 
 ## Acknowledgements
 `NSData+Base64.h/m` and `b64.h/m` from [aqtoolkit](https://github.com/AlanQuatermain/aqtoolkit) by [AlanQuatermain](https://github.com/AlanQuatermain)
