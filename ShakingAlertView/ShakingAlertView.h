@@ -10,9 +10,9 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    HashTechniqueNone   = 1,
-    HashTechniqueSHA1   = 2,
-    HashTechniqueMD5    = 3
+    HashTechniqueNone,
+    HashTechniqueSHA1,
+    HashTechniqueMD5
 } HashTechnique;
 
 
