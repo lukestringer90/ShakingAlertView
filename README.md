@@ -20,11 +20,11 @@ ShakingAlertView *shakingAlert = nil;
 shakingAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
                                            checkForPassword:@"pass"];
 
-[shakingAlert setCorrectPasswordBlock:^{
+[shakingAlert setOnCorrectPassword:^{
     // Code to execute on correct password entry
 }];
 
-[shakingAlert setDismissedWithoutPasswordBlock:^{
+[shakingAlert setOnDismissalWithoutPassword:^{
     // Code to execute on alert dismissal without password entry
 }];
 
