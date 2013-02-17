@@ -24,7 +24,7 @@
     // Block to excute on success
     [shakingAlert setOnCorrectPassword:^{
         // Show a modal view
-        [self showFailedPasswordAlert];
+        [self showModalView];
         
     }];
     
@@ -52,7 +52,7 @@
     // Block to excute on success
     [shakingAlert setOnCorrectPassword:^{
         // Show a modal view
-        [self showFailedPasswordAlert];
+        [self showModalView];
         
     }];
     
@@ -81,7 +81,7 @@
                                        usingHashingTechnique:HashTechniqueMD5
                                        onCorrectPassword:^{
                                            // Show a modal view
-                                           [self showFailedPasswordAlert];
+                                           [self showModalView];
                                        }
                                        onDismissalWithoutPassword:^{
                                            // Show regular UIAlertView to give them another go
