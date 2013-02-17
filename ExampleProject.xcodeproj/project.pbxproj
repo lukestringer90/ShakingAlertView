@@ -23,6 +23,7 @@
 		A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */; };
 		A33909F4160F18400083C023 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F2160F18400083C023 /* ModalViewController.m */; };
 		A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F8160F18630083C023 /* ModalViewController_iPad.xib */; };
+		A35C738716D197AE0069D9DF /* ShakingAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35C738616D197AE0069D9DF /* ShakingAlertViewTests.m */; };
 		A3F40CD016D189F900E5FA63 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F40CCF16D189F900E5FA63 /* SenTestingKit.framework */; };
 		A3F40CD116D189F900E5FA63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
 		A3F40CD216D189F900E5FA63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
@@ -30,6 +31,16 @@
 		A3F40CE116D18B7500E5FA63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F40CE016D18B7500E5FA63 /* Default-568h@2x.png */; };
 		F892AEBA08E346208C7BE4F5 /* libPods-ShakingAlertViewKiwiTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB572AA6B2D4A51BB4F3488 /* libPods-ShakingAlertViewKiwiTest.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A35C738816D198010069D9DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A33909C3160F17D80083C023 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A33909CB160F17D80083C023;
+			remoteInfo = ExampleProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		94B96CAED3054CEE8D07B941 /* Pods-ShakingAlertViewKiwiTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakingAlertViewKiwiTest.xcconfig"; path = "Pods/Pods-ShakingAlertViewKiwiTest.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -58,6 +69,7 @@
 		A33909F1160F18400083C023 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		A33909F2160F18400083C023 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		A33909F8160F18630083C023 /* ModalViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPad.xib; sourceTree = "<group>"; };
+		A35C738616D197AE0069D9DF /* ShakingAlertViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertViewTests.m; sourceTree = "<group>"; };
 		A3F40CCE16D189F900E5FA63 /* ShakingAlertViewKiwiTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakingAlertViewKiwiTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F40CCF16D189F900E5FA63 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A3F40CD516D189F900E5FA63 /* ShakingAlertViewKiwiTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakingAlertViewKiwiTest-Info.plist"; sourceTree = "<group>"; };
@@ -196,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				A325594D16D18C3C00C675D0 /* TestSpec.m */,
+				A35C738616D197AE0069D9DF /* ShakingAlertViewTests.m */,
 				A3F40CD416D189F900E5FA63 /* Supporting Files */,
 			);
 			path = ShakingAlertViewKiwiTest;
@@ -244,6 +257,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A35C738916D198010069D9DF /* PBXTargetDependency */,
 			);
 			name = ShakingAlertViewKiwiTest;
 			productName = ShakingAlertViewKiwiTest;
@@ -256,7 +270,7 @@
 		A33909C3160F17D80083C023 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Luke Stringer";
 			};
 			buildConfigurationList = A33909C6160F17D80083C023 /* Build configuration list for PBXProject "ExampleProject" */;
@@ -351,10 +365,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A325594E16D18C3C00C675D0 /* TestSpec.m in Sources */,
+				A35C738716D197AE0069D9DF /* ShakingAlertViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A35C738916D198010069D9DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A33909CB160F17D80083C023 /* ExampleProject */;
+			targetProxy = A35C738816D198010069D9DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A33909D9160F17D80083C023 /* InfoPlist.strings */ = {
@@ -398,6 +421,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -425,6 +451,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -483,6 +512,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -506,6 +536,7 @@
 				INFOPLIST_FILE = "ShakingAlertViewKiwiTest/ShakingAlertViewKiwiTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
