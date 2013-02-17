@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A325594E16D18C3C00C675D0 /* TestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A325594D16D18C3C00C675D0 /* TestSpec.m */; };
 		A33909D1160F17D80083C023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
 		A33909D3160F17D80083C023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
 		A33909D5160F17D80083C023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D4160F17D80083C023 /* CoreGraphics.framework */; };
@@ -19,12 +20,20 @@
 		A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */; };
 		A33909F4160F18400083C023 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F2160F18400083C023 /* ModalViewController.m */; };
 		A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F8160F18630083C023 /* ModalViewController_iPad.xib */; };
+		A3F40CD016D189F900E5FA63 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F40CCF16D189F900E5FA63 /* SenTestingKit.framework */; };
+		A3F40CD116D189F900E5FA63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
+		A3F40CD216D189F900E5FA63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
+		A3F40CD816D189F900E5FA63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3F40CD616D189F900E5FA63 /* InfoPlist.strings */; };
+		A3F40CE116D18B7500E5FA63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F40CE016D18B7500E5FA63 /* Default-568h@2x.png */; };
 		A3F440691618C566003BADA3 /* b64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440641618C566003BADA3 /* b64.m */; };
 		A3F4406A1618C566003BADA3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440661618C566003BADA3 /* NSData+Base64.m */; };
 		A3F4406B1618C566003BADA3 /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440681618C566003BADA3 /* ShakingAlertView.m */; };
+		F892AEBA08E346208C7BE4F5 /* libPods-ShakingAlertViewKiwiTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB572AA6B2D4A51BB4F3488 /* libPods-ShakingAlertViewKiwiTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94B96CAED3054CEE8D07B941 /* Pods-ShakingAlertViewKiwiTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakingAlertViewKiwiTest.xcconfig"; path = "Pods/Pods-ShakingAlertViewKiwiTest.xcconfig"; sourceTree = SOURCE_ROOT; };
+		A325594D16D18C3C00C675D0 /* TestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSpec.m; sourceTree = "<group>"; };
 		A33909CC160F17D80083C023 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33909D0160F17D80083C023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A33909D2160F17D80083C023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,12 +52,19 @@
 		A33909F1160F18400083C023 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		A33909F2160F18400083C023 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		A33909F8160F18630083C023 /* ModalViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPad.xib; sourceTree = "<group>"; };
+		A3F40CCE16D189F900E5FA63 /* ShakingAlertViewKiwiTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakingAlertViewKiwiTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F40CCF16D189F900E5FA63 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A3F40CD516D189F900E5FA63 /* ShakingAlertViewKiwiTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakingAlertViewKiwiTest-Info.plist"; sourceTree = "<group>"; };
+		A3F40CD716D189F900E5FA63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3F40CDC16D189F900E5FA63 /* ShakingAlertViewKiwiTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShakingAlertViewKiwiTest-Prefix.pch"; sourceTree = "<group>"; };
+		A3F40CE016D18B7500E5FA63 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A3F440631618C566003BADA3 /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = b64.h; path = ShakingAlertView/b64.h; sourceTree = SOURCE_ROOT; };
 		A3F440641618C566003BADA3 /* b64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = b64.m; path = ShakingAlertView/b64.m; sourceTree = SOURCE_ROOT; };
 		A3F440651618C566003BADA3 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "ShakingAlertView/NSData+Base64.h"; sourceTree = SOURCE_ROOT; };
 		A3F440661618C566003BADA3 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "ShakingAlertView/NSData+Base64.m"; sourceTree = SOURCE_ROOT; };
 		A3F440671618C566003BADA3 /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShakingAlertView.h; path = ShakingAlertView/ShakingAlertView.h; sourceTree = SOURCE_ROOT; };
 		A3F440681618C566003BADA3 /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakingAlertView.m; path = ShakingAlertView/ShakingAlertView.m; sourceTree = SOURCE_ROOT; };
+		DEB572AA6B2D4A51BB4F3488 /* libPods-ShakingAlertViewKiwiTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShakingAlertViewKiwiTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +78,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A3F40CCA16D189F900E5FA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F40CD016D189F900E5FA63 /* SenTestingKit.framework in Frameworks */,
+				A3F40CD116D189F900E5FA63 /* UIKit.framework in Frameworks */,
+				A3F40CD216D189F900E5FA63 /* Foundation.framework in Frameworks */,
+				F892AEBA08E346208C7BE4F5 /* libPods-ShakingAlertViewKiwiTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A33909C1160F17D80083C023 = {
 			isa = PBXGroup;
 			children = (
+				A3F40CE016D18B7500E5FA63 /* Default-568h@2x.png */,
 				A33909D6160F17D80083C023 /* ExampleProject */,
+				A3F40CD316D189F900E5FA63 /* ShakingAlertViewKiwiTest */,
 				A33909CF160F17D80083C023 /* Frameworks */,
 				A33909CD160F17D80083C023 /* Products */,
+				94B96CAED3054CEE8D07B941 /* Pods-ShakingAlertViewKiwiTest.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A33909CC160F17D80083C023 /* ExampleProject.app */,
+				A3F40CCE16D189F900E5FA63 /* ShakingAlertViewKiwiTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +119,8 @@
 				A33909D0160F17D80083C023 /* UIKit.framework */,
 				A33909D2160F17D80083C023 /* Foundation.framework */,
 				A33909D4160F17D80083C023 /* CoreGraphics.framework */,
+				A3F40CCF16D189F900E5FA63 /* SenTestingKit.framework */,
+				DEB572AA6B2D4A51BB4F3488 /* libPods-ShakingAlertViewKiwiTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +192,25 @@
 			name = Crypt;
 			sourceTree = "<group>";
 		};
+		A3F40CD316D189F900E5FA63 /* ShakingAlertViewKiwiTest */ = {
+			isa = PBXGroup;
+			children = (
+				A325594D16D18C3C00C675D0 /* TestSpec.m */,
+				A3F40CD416D189F900E5FA63 /* Supporting Files */,
+			);
+			path = ShakingAlertViewKiwiTest;
+			sourceTree = "<group>";
+		};
+		A3F40CD416D189F900E5FA63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3F40CD516D189F900E5FA63 /* ShakingAlertViewKiwiTest-Info.plist */,
+				A3F40CD616D189F900E5FA63 /* InfoPlist.strings */,
+				A3F40CDC16D189F900E5FA63 /* ShakingAlertViewKiwiTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +230,25 @@
 			productName = ExampleProject;
 			productReference = A33909CC160F17D80083C023 /* ExampleProject.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A3F40CCD16D189F900E5FA63 /* ShakingAlertViewKiwiTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3F40CDD16D189F900E5FA63 /* Build configuration list for PBXNativeTarget "ShakingAlertViewKiwiTest" */;
+			buildPhases = (
+				A3F40CC916D189F900E5FA63 /* Sources */,
+				A3F40CCA16D189F900E5FA63 /* Frameworks */,
+				A3F40CCB16D189F900E5FA63 /* Resources */,
+				A3F40CCC16D189F900E5FA63 /* ShellScript */,
+				50CE85E8BB0340788216EDCA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShakingAlertViewKiwiTest;
+			productName = ShakingAlertViewKiwiTest;
+			productReference = A3F40CCE16D189F900E5FA63 /* ShakingAlertViewKiwiTest.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,6 +272,7 @@
 			projectRoot = "";
 			targets = (
 				A33909CB160F17D80083C023 /* ExampleProject */,
+				A3F40CCD16D189F900E5FA63 /* ShakingAlertViewKiwiTest */,
 			);
 		};
 /* End PBXProject section */
@@ -215,10 +287,49 @@
 				A33909EA160F17D80083C023 /* ViewController_iPad.xib in Resources */,
 				A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */,
 				A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */,
+				A3F40CE116D18B7500E5FA63 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F40CCB16D189F900E5FA63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F40CD816D189F900E5FA63 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50CE85E8BB0340788216EDCA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ShakingAlertViewKiwiTest-resources.sh\"\n";
+		};
+		A3F40CCC16D189F900E5FA63 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A33909C8160F17D80083C023 /* Sources */ = {
@@ -232,6 +343,14 @@
 				A3F440691618C566003BADA3 /* b64.m in Sources */,
 				A3F4406A1618C566003BADA3 /* NSData+Base64.m in Sources */,
 				A3F4406B1618C566003BADA3 /* ShakingAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F40CC916D189F900E5FA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A325594E16D18C3C00C675D0 /* TestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +379,14 @@
 				A33909E9160F17D80083C023 /* en */,
 			);
 			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		A3F40CD616D189F900E5FA63 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3F40CD716D189F900E5FA63 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,6 +463,53 @@
 			};
 			name = Release;
 		};
+		A3F40CDE16D189F900E5FA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B96CAED3054CEE8D07B941 /* Pods-ShakingAlertViewKiwiTest.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ExampleProject.app/ExampleProject";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakingAlertViewKiwiTest/ShakingAlertViewKiwiTest-Prefix.pch";
+				INFOPLIST_FILE = "ShakingAlertViewKiwiTest/ShakingAlertViewKiwiTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A3F40CDF16D189F900E5FA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B96CAED3054CEE8D07B941 /* Pods-ShakingAlertViewKiwiTest.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ExampleProject.app/ExampleProject";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShakingAlertViewKiwiTest/ShakingAlertViewKiwiTest-Prefix.pch";
+				INFOPLIST_FILE = "ShakingAlertViewKiwiTest/ShakingAlertViewKiwiTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -353,6 +527,15 @@
 			buildConfigurations = (
 				A33909EE160F17D80083C023 /* Debug */,
 				A33909EF160F17D80083C023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3F40CDD16D189F900E5FA63 /* Build configuration list for PBXNativeTarget "ShakingAlertViewKiwiTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F40CDE16D189F900E5FA63 /* Debug */,
+				A3F40CDF16D189F900E5FA63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
