@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A325594E16D18C3C00C675D0 /* TestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A325594D16D18C3C00C675D0 /* TestSpec.m */; };
+		A325595316D18F1D00C675D0 /* b64.m in Sources */ = {isa = PBXBuildFile; fileRef = A325595016D18F1D00C675D0 /* b64.m */; };
+		A325595416D18F1D00C675D0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A325595216D18F1D00C675D0 /* NSData+Base64.m */; };
+		A325595716D18F2500C675D0 /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A325595616D18F2500C675D0 /* ShakingAlertView.m */; };
 		A33909D1160F17D80083C023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
 		A33909D3160F17D80083C023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
 		A33909D5160F17D80083C023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D4160F17D80083C023 /* CoreGraphics.framework */; };
@@ -25,15 +28,18 @@
 		A3F40CD216D189F900E5FA63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
 		A3F40CD816D189F900E5FA63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3F40CD616D189F900E5FA63 /* InfoPlist.strings */; };
 		A3F40CE116D18B7500E5FA63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F40CE016D18B7500E5FA63 /* Default-568h@2x.png */; };
-		A3F440691618C566003BADA3 /* b64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440641618C566003BADA3 /* b64.m */; };
-		A3F4406A1618C566003BADA3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440661618C566003BADA3 /* NSData+Base64.m */; };
-		A3F4406B1618C566003BADA3 /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F440681618C566003BADA3 /* ShakingAlertView.m */; };
 		F892AEBA08E346208C7BE4F5 /* libPods-ShakingAlertViewKiwiTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB572AA6B2D4A51BB4F3488 /* libPods-ShakingAlertViewKiwiTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		94B96CAED3054CEE8D07B941 /* Pods-ShakingAlertViewKiwiTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakingAlertViewKiwiTest.xcconfig"; path = "Pods/Pods-ShakingAlertViewKiwiTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 		A325594D16D18C3C00C675D0 /* TestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSpec.m; sourceTree = "<group>"; };
+		A325594F16D18F1D00C675D0 /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b64.h; sourceTree = "<group>"; };
+		A325595016D18F1D00C675D0 /* b64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = b64.m; sourceTree = "<group>"; };
+		A325595116D18F1D00C675D0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		A325595216D18F1D00C675D0 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		A325595516D18F2500C675D0 /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakingAlertView.h; sourceTree = "<group>"; };
+		A325595616D18F2500C675D0 /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertView.m; sourceTree = "<group>"; };
 		A33909CC160F17D80083C023 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33909D0160F17D80083C023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A33909D2160F17D80083C023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,12 +64,6 @@
 		A3F40CD716D189F900E5FA63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3F40CDC16D189F900E5FA63 /* ShakingAlertViewKiwiTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShakingAlertViewKiwiTest-Prefix.pch"; sourceTree = "<group>"; };
 		A3F40CE016D18B7500E5FA63 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A3F440631618C566003BADA3 /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = b64.h; path = ShakingAlertView/b64.h; sourceTree = SOURCE_ROOT; };
-		A3F440641618C566003BADA3 /* b64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = b64.m; path = ShakingAlertView/b64.m; sourceTree = SOURCE_ROOT; };
-		A3F440651618C566003BADA3 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "ShakingAlertView/NSData+Base64.h"; sourceTree = SOURCE_ROOT; };
-		A3F440661618C566003BADA3 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "ShakingAlertView/NSData+Base64.m"; sourceTree = SOURCE_ROOT; };
-		A3F440671618C566003BADA3 /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShakingAlertView.h; path = ShakingAlertView/ShakingAlertView.h; sourceTree = SOURCE_ROOT; };
-		A3F440681618C566003BADA3 /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakingAlertView.m; path = ShakingAlertView/ShakingAlertView.m; sourceTree = SOURCE_ROOT; };
 		DEB572AA6B2D4A51BB4F3488 /* libPods-ShakingAlertViewKiwiTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShakingAlertViewKiwiTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,8 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				A3E0B6C5160F4555001E7952 /* Crypt */,
-				A3F440671618C566003BADA3 /* ShakingAlertView.h */,
-				A3F440681618C566003BADA3 /* ShakingAlertView.m */,
+				A325595516D18F2500C675D0 /* ShakingAlertView.h */,
+				A325595616D18F2500C675D0 /* ShakingAlertView.m */,
 			);
 			name = ShakingAlertView;
 			sourceTree = "<group>";
@@ -184,10 +184,10 @@
 		A3E0B6C5160F4555001E7952 /* Crypt */ = {
 			isa = PBXGroup;
 			children = (
-				A3F440631618C566003BADA3 /* b64.h */,
-				A3F440641618C566003BADA3 /* b64.m */,
-				A3F440651618C566003BADA3 /* NSData+Base64.h */,
-				A3F440661618C566003BADA3 /* NSData+Base64.m */,
+				A325594F16D18F1D00C675D0 /* b64.h */,
+				A325595016D18F1D00C675D0 /* b64.m */,
+				A325595116D18F1D00C675D0 /* NSData+Base64.h */,
+				A325595216D18F1D00C675D0 /* NSData+Base64.m */,
 			);
 			name = Crypt;
 			sourceTree = "<group>";
@@ -340,9 +340,9 @@
 				A33909E1160F17D80083C023 /* AppDelegate.m in Sources */,
 				A33909E4160F17D80083C023 /* ViewController.m in Sources */,
 				A33909F4160F18400083C023 /* ModalViewController.m in Sources */,
-				A3F440691618C566003BADA3 /* b64.m in Sources */,
-				A3F4406A1618C566003BADA3 /* NSData+Base64.m in Sources */,
-				A3F4406B1618C566003BADA3 /* ShakingAlertView.m in Sources */,
+				A325595316D18F1D00C675D0 /* b64.m in Sources */,
+				A325595416D18F1D00C675D0 /* NSData+Base64.m in Sources */,
+				A325595716D18F2500C675D0 /* ShakingAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
