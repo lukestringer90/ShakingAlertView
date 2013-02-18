@@ -62,7 +62,7 @@ describe(@"ShakingAlertView", ^{
         });
         
         it(@"should call success block for correct password entry", ^{
-            __block BOOL successReached;
+            __block BOOL successReached = NO;
             
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password
