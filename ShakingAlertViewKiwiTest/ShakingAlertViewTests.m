@@ -86,9 +86,42 @@ describe(@"ShakingAlertView", ^{
             
         });
         
+        it(@"should return specified password property after construction", ^{
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            [[shakingAlertView.password should] equal:password];
+        });
+        
+        it(@"should return specified title property after construction", ^{
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            [[shakingAlertView.title should] equal:title];
+        });
+        
+        it(@"should return specified HashTechnique property after construction", ^{
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password usingHashingTechnique:HashTechniqueSHA1];
+            [[theValue(shakingAlertView.hashTechnique) should] equal:theValue(HashTechniqueSHA1)];
+        });
+        
+        it(@"should have valid public properties after construction", ^{
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password
+                                                      usingHashingTechnique:HashTechniqueMD5
+                                                          onCorrectPassword:correctPassword
+                                                 onDismissalWithoutPassword:dismissed];
+            
+            [shakingAlertView.title shouldNotBeNil];
+            [shakingAlertView.password shouldNotBeNil];
+            [shakingAlertView.onCorrectPassword shouldNotBeNil];
+            [shakingAlertView.onDismissalWithoutPassword shouldNotBeNil];
+            [theValue(shakingAlertView.hashTechnique) shouldNotBeNil];
+            
+        });
+        
     });
     
-    context(@"received a password", ^{
+    context(@"received a password for plaintext checking", ^{
         __block ShakingAlertView *shakingAlertView = nil;
         __block NSString *title = @"Test Title";
         __block NSString *password = @"password";
@@ -100,9 +133,10 @@ describe(@"ShakingAlertView", ^{
         });
         
         it(@"should succeed and call block for correct password entry", ^{
+            
+            // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
-            
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password
                                                           onCorrectPassword:^{
@@ -128,12 +162,14 @@ describe(@"ShakingAlertView", ^{
         
         
         it(@"should succeed and call block for correct password entry when block set after constrruction", ^{
-            __block BOOL successReached = NO;
             
             // Setup
+            __block BOOL successReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password];
-            shakingAlertView.onCorrectPassword = ^{ successReached = YES; };
+            shakingAlertView.onCorrectPassword = ^{
+                successReached = YES;
+            };
 
             // Show it
             [shakingAlertView show];
@@ -152,6 +188,7 @@ describe(@"ShakingAlertView", ^{
         
         it(@"should shake for incorrect password entry", ^{
             
+            // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
@@ -180,6 +217,7 @@ describe(@"ShakingAlertView", ^{
         
         it(@"should fail and call block for incorrect password entry", ^{
             
+            // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
@@ -203,6 +241,31 @@ describe(@"ShakingAlertView", ^{
             
         });
         
+        it(@"should fail and call block for incorrect password entry when block set after construction", ^{
+            
+            // Setup
+            __block BOOL failureReached = NO;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            shakingAlertView.onDismissalWithoutPassword = ^{
+                failureReached = YES;
+            };
+            
+            // Show it
+            [shakingAlertView show];
+            
+            // Dismiss it with cancel nutton
+            [shakingAlertView dismissWithClickedButtonIndex:shakingAlertView.cancelButtonIndex animated:YES];
+            
+            // Failure block should be called
+            [[theValue(failureReached) should] beTrue];
+            
+        });
+        
+    });
+    
+    context(@"recieved a password for hashed testing", ^{
+        //
     });
     
 });
