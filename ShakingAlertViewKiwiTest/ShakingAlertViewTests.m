@@ -133,7 +133,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         it(@"should succeed and call block for correct password entry", ^{
-            
             // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
@@ -157,12 +156,10 @@ describe(@"ShakingAlertView", ^{
             // Sucess block should be called and failure should not be called
             [[theValue(successReached) should] beTrue];
             [[theValue(failureReached) shouldNot] beTrue];
-            
         });
         
         
         it(@"should succeed and call block for correct password entry when block set after constrruction", ^{
-            
             // Setup
             __block BOOL successReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
@@ -181,13 +178,11 @@ describe(@"ShakingAlertView", ^{
             [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
             
             // Block should have been called
-            [[theValue(successReached) should] beTrue];
-            
+            [[theValue(successReached) should] beTrue]; 
         });
         
         
         it(@"should shake for incorrect password entry", ^{
-            
             // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
@@ -212,7 +207,6 @@ describe(@"ShakingAlertView", ^{
             // Neither of the completion blocks should have been called
             [[theValue(successReached) should] beFalse];
             [[theValue(successReached) should] beFalse];
-            
         });
         
         it(@"should fail and call block for incorrect password entry", ^{
@@ -237,12 +231,10 @@ describe(@"ShakingAlertView", ^{
             
             // Failure block should be called and sucess should not be called
             [[theValue(failureReached) should] beTrue];
-            [[theValue(successReached) shouldNot] beTrue];
-            
+            [[theValue(successReached) shouldNot] beTrue]; 
         });
         
         it(@"should fail and call block for incorrect password entry when block set after construction", ^{
-            
             // Setup
             __block BOOL failureReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
@@ -259,13 +251,136 @@ describe(@"ShakingAlertView", ^{
             
             // Failure block should be called
             [[theValue(failureReached) should] beTrue];
-            
         });
         
     });
     
-    context(@"recieved a password for hashed testing", ^{
-        //
+    context(@"recieved a password for SHA1 testing", ^{
+        
+        __block ShakingAlertView *shakingAlertView = nil;
+        __block NSString *title = @"Test Title";
+        __block NSString *SHA1Password = @"W6ph5Mm5Pz8GgiULbPgzG37mj9g=";
+        
+        // Cleaup
+        afterEach(^{
+            [shakingAlertView release];
+            shakingAlertView = nil;
+        });
+        
+        it(@"should succeed and call block for correct password entry using SHA1 specified in constructor", ^{
+            // Setup
+            __block BOOL successReached = NO;
+            __block BOOL failureReached = NO;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:SHA1Password
+                                                      usingHashingTechnique:HashTechniqueSHA1
+                                                          onCorrectPassword:^{
+                                                              successReached = YES;
+                                                          }
+                                                 onDismissalWithoutPassword:^{
+                                                     failureReached = YES;
+                                                 }];
+            // Show it
+            [shakingAlertView show];
+            
+            // Type password
+            shakingAlertView.passwordField.text = @"password";
+            
+            // Done with typing
+            [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
+            
+            [[theValue(successReached) should] beTrue];
+            [[theValue(failureReached) shouldNot] beTrue];
+        });
+        
+        it(@"should succeed and call block for correct password entry using SHA1 specified after construction", ^{
+            // Setup
+            __block BOOL successReached = NO;
+            __block BOOL failureReached = NO;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:SHA1Password
+                                                          onCorrectPassword:^{
+                                                              successReached = YES;
+                                                          }
+                                                 onDismissalWithoutPassword:^{
+                                                     failureReached = YES;
+                                                 }];
+            shakingAlertView.hashTechnique = HashTechniqueSHA1;
+            
+            // Show it
+            [shakingAlertView show];
+            
+            // Type password
+            shakingAlertView.passwordField.text = @"password";
+            
+            // Done with typing
+            [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
+            
+            [[theValue(successReached) should] beTrue];
+            [[theValue(failureReached) shouldNot] beTrue];
+        });
+        
+    });
+    
+    context(@"recieved a password for MD5 testing", ^{
+        
+        __block ShakingAlertView *shakingAlertView = nil;
+        __block NSString *title = @"Test Title";
+        __block NSString *MD5Password = @"X03MO1qnZdYdgyfeuILPmQ==";
+        
+        it(@"should succeed and call block for correct password entry using MD5 specified in constructor", ^{
+            // Setup
+            __block BOOL successReached = NO;
+            __block BOOL failureReached = NO;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:MD5Password
+                                                      usingHashingTechnique:HashTechniqueMD5
+                                                          onCorrectPassword:^{
+                                                              successReached = YES;
+                                                          }
+                                                 onDismissalWithoutPassword:^{
+                                                     failureReached = YES;
+                                                 }];
+            // Show it
+            [shakingAlertView show];
+            
+            // Type password
+            shakingAlertView.passwordField.text = @"password";
+            
+            // Done with typing
+            [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
+            
+            [[theValue(successReached) should] beTrue];
+            [[theValue(failureReached) shouldNot] beTrue];
+        });
+        
+        it(@"should succeed and call block for correct password entry using MD5 specified after construction", ^{
+            // Setup
+            __block BOOL successReached = NO;
+            __block BOOL failureReached = NO;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:MD5Password
+                                                          onCorrectPassword:^{
+                                                              successReached = YES;
+                                                          }
+                                                 onDismissalWithoutPassword:^{
+                                                     failureReached = YES;
+                                                 }];
+            shakingAlertView.hashTechnique = HashTechniqueMD5;
+            
+            // Show it
+            [shakingAlertView show];
+            
+            // Type password
+            shakingAlertView.passwordField.text = @"password";
+            
+            // Done with typing
+            [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
+            
+            [[theValue(successReached) should] beTrue];
+            [[theValue(failureReached) shouldNot] beTrue];
+        });
+
     });
     
 });
