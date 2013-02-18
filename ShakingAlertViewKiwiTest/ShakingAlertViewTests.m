@@ -20,7 +20,7 @@ SPEC_BEGIN(ShakingAlertViewTests)
 
 describe(@"ShakingAlertView", ^{
     
-    context(@"being set up", ^{
+    context(@"just created", ^{
         
         __block ShakingAlertView *shakingAlertView = nil;
         __block NSString *title = @"Test Title";
