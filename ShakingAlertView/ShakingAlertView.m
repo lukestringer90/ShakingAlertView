@@ -200,7 +200,7 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             // Dismiss with success
             [alertView dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexSuccess animated:YES];
-            _onCorrectPassword();
+            [self safeCallBlock:self.self.onCorrectPassword];
             
         }
         
@@ -220,11 +220,11 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
     switch (buttonIndex) {
         case ShakingAlertViewButtonIndexSuccess:
             [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
-            _onCorrectPassword();
+            [self safeCallBlock:self.self.onCorrectPassword];
             break;
         case ShakingAlertViewButtonIndexDismiss:
             [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
-            _onDismissalWithoutPassword();
+            [self safeCallBlock:self.onDismissalWithoutPassword];
             break;
         default:
             break;
@@ -249,6 +249,14 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
     // Password is incorrect to so animate
     [self animateIncorrectPassword];
     return NO;
+}
+
+#pragma mark - Private helpers
+- (void)safeCallBlock:(void (^)(void))block {
+    // Only call the block is not nil
+    if (block) {
+        block();
+    }
 }
 
 - (BOOL)enteredTextIsCorrect {
