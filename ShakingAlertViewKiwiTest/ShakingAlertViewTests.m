@@ -20,6 +20,8 @@ SPEC_BEGIN(ShakingAlertViewTests)
 
 describe(@"ShakingAlertView", ^{
     
+    // ------------------------------------------------------------------------
+    
     context(@"just created", ^{
         
         __block ShakingAlertView *shakingAlertView = nil;
@@ -121,7 +123,10 @@ describe(@"ShakingAlertView", ^{
         
     });
     
+    // ------------------------------------------------------------------------
+    
     context(@"received a password for plaintext checking", ^{
+        
         __block ShakingAlertView *shakingAlertView = nil;
         __block NSString *title = @"Test Title";
         __block NSString *password = @"password";
@@ -181,6 +186,48 @@ describe(@"ShakingAlertView", ^{
             [[theValue(successReached) should] beTrue]; 
         });
         
+        it(@"should succeed and call the completion block ONCE only when enter pressed", ^{
+            // Setup
+            __block int successReachedCount = 0;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            shakingAlertView.onCorrectPassword = ^{
+                successReachedCount++;
+            };
+            
+            // Show it
+            [shakingAlertView show];
+            
+            // Type password
+            shakingAlertView.passwordField.text = @"password";
+            
+            // Done with typing
+            [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
+            
+            [[theValue(successReachedCount) should] equal:theValue(1)];
+        });
+        
+        it(@"should succeed and call the completion block ONCE only when OK button tapped", ^{
+            // Setup
+            __block int successReachedCount = 0;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            shakingAlertView.onCorrectPassword = ^{
+                successReachedCount++;
+            };
+            
+            // Show it
+            [shakingAlertView show];
+            
+            // Type password
+            shakingAlertView.passwordField.text = @"password";
+            
+            // Press OK button
+            [shakingAlertView.delegate alertView:shakingAlertView clickedButtonAtIndex:shakingAlertView.firstOtherButtonIndex];
+            
+            [[theValue(successReachedCount) should] equal:theValue(1)];
+        });
+        
         
         it(@"should shake for incorrect password entry", ^{
             // Setup
@@ -226,7 +273,7 @@ describe(@"ShakingAlertView", ^{
             // Show it
             [shakingAlertView show];
             
-            // Dismiss it with cancel nutton
+            // Dismiss it with cancel button
             [shakingAlertView dismissWithClickedButtonIndex:shakingAlertView.cancelButtonIndex animated:YES];
             
             // Failure block should be called and sucess should not be called
@@ -253,7 +300,47 @@ describe(@"ShakingAlertView", ^{
             [[theValue(failureReached) should] beTrue];
         });
         
+        it(@"should fail and call the completion block ONCE only", ^{
+            // Setup
+            __block int failureReachedCount = 0;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            shakingAlertView.onDismissalWithoutPassword = ^{
+                failureReachedCount++;
+            };
+            
+            // Dismiss it with cancel nutton
+            [shakingAlertView dismissWithClickedButtonIndex:shakingAlertView.cancelButtonIndex animated:YES];
+            
+            // Failure block should be called
+            [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
+            
+            // Test
+            [[theValue(failureReachedCount) should] equal:theValue(1)];
+        });
+        
+        it(@"should fail and call the completion block ONCE only when OK button tapped", ^{
+            // Setup
+            __block int failureReachedCount = 0;
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            shakingAlertView.onDismissalWithoutPassword = ^{
+                failureReachedCount++;
+            };
+            
+            // Dismiss it with cancel button
+            [shakingAlertView dismissWithClickedButtonIndex:shakingAlertView.cancelButtonIndex animated:YES];
+            
+            // Press OK button
+            [shakingAlertView.delegate alertView:shakingAlertView clickedButtonAtIndex:shakingAlertView.firstOtherButtonIndex];
+            
+            [[theValue(failureReachedCount) should] equal:theValue(1)];
+        });
+
+        
     });
+    
+    // ------------------------------------------------------------------------
     
     context(@"recieved a password for SHA1 testing", ^{
         
@@ -322,6 +409,9 @@ describe(@"ShakingAlertView", ^{
         
     });
     
+    
+    // ------------------------------------------------------------------------
+    
     context(@"recieved a password for MD5 testing", ^{
         
         __block ShakingAlertView *shakingAlertView = nil;
@@ -382,6 +472,9 @@ describe(@"ShakingAlertView", ^{
         });
 
     });
+    
+    
+    // ------------------------------------------------------------------------
     
 });
 
