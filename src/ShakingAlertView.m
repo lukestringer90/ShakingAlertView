@@ -200,7 +200,6 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             // Dismiss with success
             [alertView dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexSuccess animated:YES];
-            [self safeCallBlock:self.self.onCorrectPassword];
             
         }
         
@@ -220,7 +219,7 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
     switch (buttonIndex) {
         case ShakingAlertViewButtonIndexSuccess:
             [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
-            [self safeCallBlock:self.self.onCorrectPassword];
+            [self safeCallBlock:self.onCorrectPassword];
             break;
         case ShakingAlertViewButtonIndexDismiss:
             [super dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexDismiss animated:animated];
