@@ -200,7 +200,6 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             // Dismiss with success
             [alertView dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexSuccess animated:YES];
-            
         }
         
         // If incorrect then animate
