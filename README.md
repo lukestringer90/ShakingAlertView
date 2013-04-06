@@ -58,7 +58,7 @@ typedef enum {
 `HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` and `initWithAlertTitle:checkForPassword:onCorrectPassword:onDismissalWithoutPassword` constructors. Here the entered string is compared with the specified plaintext password using a simple `isEqualToString:`  evaluation.
 
 ## Acknowledgements
-`NSData+Base64.h/m` and `b64.h/m` from [aqtoolkit](https://github.com/AlanQuatermain/aqtoolkit) by [AlanQuatermain](https://github.com/AlanQuatermain)
+`NSData+Base64.h/m` and `b64.h/m` from [aqtoolkit](https://github.com/AlanQuatermain/aqtoolkit) by [Jim Dovey](https://github.com/AlanQuatermain)
 
 ## Licence
 This code is distributed under the terms and conditions of the MIT license.
