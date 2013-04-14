@@ -157,8 +157,7 @@ NSData * b64_encode( NSData * data )
     }
     
     NSData * result = [outputData copy];
-    [outputData release];
-    return ( [result autorelease] );
+    return ( result );
 }
 
 /*
@@ -227,6 +226,5 @@ NSData * b64_decode( NSData * data )
     }
     
     NSData * result = [outputData copy];
-    [outputData release];
-    return ( [result autorelease] );
+    return ( result );
 }

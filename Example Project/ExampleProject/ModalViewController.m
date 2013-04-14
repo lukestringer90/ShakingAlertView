@@ -30,7 +30,6 @@
     
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissModalViewControllerAnimated:)];
     self.navigationItem.rightBarButtonItem = doneButton;
-    [doneButton release];
 }
 
 - (void)viewDidUnload

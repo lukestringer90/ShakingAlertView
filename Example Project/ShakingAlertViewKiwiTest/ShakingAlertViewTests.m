@@ -36,7 +36,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         afterEach(^{
-            [shakingAlertView release];
             shakingAlertView = nil;
         });
         
@@ -147,7 +146,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         afterEach(^{
-            [shakingAlertView release];
             shakingAlertView = nil;
         });
         
@@ -238,7 +236,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         afterEach(^{
-            [shakingAlertView release];
             shakingAlertView = nil;
         });
         
@@ -306,7 +303,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         afterEach(^{
-            [shakingAlertView release];
             shakingAlertView = nil;
         });
         
@@ -404,7 +400,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         afterEach(^{
-            [shakingAlertView release];
             shakingAlertView = nil;
         });
         

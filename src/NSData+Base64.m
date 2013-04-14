@@ -51,15 +51,14 @@
 - (id) initWithBase64String: (NSString *) base64String
 {
     NSData * charData = [base64String dataUsingEncoding: NSUTF8StringEncoding];
-    NSData * result = [b64_decode(charData) retain];        // we'll return this with 1 extant retain count
-    [self release];
+    NSData * result = b64_decode(charData);        // we'll return this with 1 extant retain count
     return ( result );
 }
 
 - (NSString *) base64EncodedString
 {
     NSData * charData = b64_encode( self );
-    return ( [[[NSString alloc] initWithData: charData encoding: NSUTF8StringEncoding] autorelease] );
+    return ( [[NSString alloc] initWithData: charData encoding: NSUTF8StringEncoding] );
 }
 
 @end
