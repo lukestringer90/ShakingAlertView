@@ -22,15 +22,22 @@ describe(@"ShakingAlertView", ^{
     
     // ------------------------------------------------------------------------
     
-    context(@"just created", ^{
+    context(@"construction", ^{
         
-        __block ShakingAlertView *shakingAlertView = nil;
-        __block NSString *title = @"Test Title";
-        __block NSString *password = @"password";
-        __block void (^correctPassword)(void) = ^(void) { NSLog(@"Correct Password"); };
-        __block void (^dismissed)(void) = ^(void) { NSLog(@"Dimssed"); };
+        __block ShakingAlertView *shakingAlertView ;
+        __block NSString *title;
+        __block NSString *password;
+        __block void (^correctPassword)(void);
+        __block void (^dismissed)(void);
         
-        // Cleaup
+        beforeAll(^{
+            shakingAlertView = nil;
+            title = @"Test Title";
+            password = @"password";
+            correctPassword = ^(void) { NSLog(@"Correct Password"); };
+            dismissed = ^(void) { NSLog(@"Dimssed"); };
+        });
+        
         afterEach(^{
             [shakingAlertView release];
             shakingAlertView = nil;
@@ -88,6 +95,12 @@ describe(@"ShakingAlertView", ^{
             
         });
         
+        it(@"should use HashTechniqueNone by default", ^{
+            shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
+                                                           checkForPassword:password];
+            [[theValue(shakingAlertView.hashTechnique) should] equal:theValue(HashTechniqueNone)];
+        });
+        
         it(@"should return specified password property after construction", ^{
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password];
@@ -127,18 +140,22 @@ describe(@"ShakingAlertView", ^{
     
     context(@"received a password for plaintext checking", ^{
         
-        __block ShakingAlertView *shakingAlertView = nil;
-        __block NSString *title = @"Test Title";
-        __block NSString *password = @"password";
+        __block ShakingAlertView *shakingAlertView;
+        __block NSString *title;
+        __block NSString *password;
         
-        // Cleaup
+        beforeAll(^{
+            shakingAlertView = nil;
+            title = @"Test Title";
+            password = @"password";
+        });
+        
         afterEach(^{
             [shakingAlertView release];
             shakingAlertView = nil;
         });
         
         it(@"should succeed and call block for correct password entry", ^{
-            // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
@@ -149,23 +166,18 @@ describe(@"ShakingAlertView", ^{
                                                  onDismissalWithoutPassword:^{
                                                      failureReached = YES;
                                                  }];
-            // Show it
             [shakingAlertView show];
-            
-            // Type password
+    
+            // Type and tap return
             shakingAlertView.passwordField.text = @"password";
-            
-            // Done with typing
             [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
             
-            // Sucess block should be called and failure should not be called
             [[theValue(successReached) should] beTrue];
             [[theValue(failureReached) shouldNot] beTrue];
         });
         
         
         it(@"should succeed and call block for correct password entry when block set after constrruction", ^{
-            // Setup
             __block BOOL successReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password];
@@ -173,21 +185,16 @@ describe(@"ShakingAlertView", ^{
                 successReached = YES;
             };
 
-            // Show it
             [shakingAlertView show];
             
-            // Type password
+            // Type and tap return
             shakingAlertView.passwordField.text = @"password";
-            
-            // Done with typing
             [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
             
-            // Block should have been called
             [[theValue(successReached) should] beTrue]; 
         });
         
         it(@"should succeed and call the completion block ONCE only when enter pressed", ^{
-            // Setup
             __block int successReachedCount = 0;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password];
@@ -195,20 +202,16 @@ describe(@"ShakingAlertView", ^{
                 successReachedCount++;
             };
             
-            // Show it
             [shakingAlertView show];
             
-            // Type password
+            // Type and tap return
             shakingAlertView.passwordField.text = @"password";
-            
-            // Done with typing
             [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
             
             [[theValue(successReachedCount) should] equal:theValue(1)];
         });
         
         it(@"should succeed and call the completion block ONCE only when OK button tapped", ^{
-            // Setup
             __block int successReachedCount = 0;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password];
@@ -216,13 +219,10 @@ describe(@"ShakingAlertView", ^{
                 successReachedCount++;
             };
             
-            // Show it
             [shakingAlertView show];
             
-            // Type password
+            // Type and tap return
             shakingAlertView.passwordField.text = @"password";
-            
-            // Press OK button
             [shakingAlertView.delegate alertView:shakingAlertView clickedButtonAtIndex:shakingAlertView.firstOtherButtonIndex];
             
             [[theValue(successReachedCount) should] equal:theValue(1)];
@@ -230,7 +230,6 @@ describe(@"ShakingAlertView", ^{
         
         
         it(@"should shake for incorrect password entry", ^{
-            // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
@@ -239,16 +238,12 @@ describe(@"ShakingAlertView", ^{
                                                            } onDismissalWithoutPassword:^{
                                                                failureReached = NO;
                                                            }];
-            // Show it
             [shakingAlertView show];
             
-            // Type incorrect password
+            // Type and tap return
+            // Test the view shakes for the incorrect password
             shakingAlertView.passwordField.text = @"incorrect_password";
-            
-            // Should shake when done typing
             [[shakingAlertView should] receive:@selector(animateIncorrectPassword)];
-            
-            // Done with typing
             [shakingAlertView textFieldShouldReturn:shakingAlertView.passwordField];
             
             // Neither of the completion blocks should have been called
@@ -257,8 +252,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         it(@"should fail and call block for incorrect password entry", ^{
-            
-            // Setup
             __block BOOL successReached = NO;
             __block BOOL failureReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
@@ -270,7 +263,6 @@ describe(@"ShakingAlertView", ^{
                                                      failureReached = YES;
                                                  }];
             
-            // Show it
             [shakingAlertView show];
             
             // Dismiss it with cancel button
@@ -282,7 +274,6 @@ describe(@"ShakingAlertView", ^{
         });
         
         it(@"should fail and call block for incorrect password entry when block set after construction", ^{
-            // Setup
             __block BOOL failureReached = NO;
             shakingAlertView = [[ShakingAlertView alloc] initWithAlertTitle:title
                                                            checkForPassword:password];
@@ -290,7 +281,6 @@ describe(@"ShakingAlertView", ^{
                 failureReached = YES;
             };
             
-            // Show it
             [shakingAlertView show];
             
             // Dismiss it with cancel nutton
