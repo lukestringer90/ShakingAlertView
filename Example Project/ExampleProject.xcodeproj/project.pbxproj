@@ -19,10 +19,10 @@
 		A33909F3160F18400083C023 /* ModalViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F0160F18400083C023 /* ModalViewController_iPhone.xib */; };
 		A33909F4160F18400083C023 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33909F2160F18400083C023 /* ModalViewController.m */; };
 		A33909F9160F18630083C023 /* ModalViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33909F8160F18630083C023 /* ModalViewController_iPad.xib */; };
-		A35C738716D197AE0069D9DF /* ShakingAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35C738616D197AE0069D9DF /* ShakingAlertViewTests.m */; };
 		A36DDF54171AE1C600E8DF1F /* b64.m in Sources */ = {isa = PBXBuildFile; fileRef = A36DDF51171AE1C600E8DF1F /* b64.m */; };
 		A36DDF55171AE1C600E8DF1F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A36DDF53171AE1C600E8DF1F /* NSData+Base64.m */; };
 		A36DDF58171AE1CE00E8DF1F /* ShakingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A36DDF57171AE1CE00E8DF1F /* ShakingAlertView.m */; };
+		A36DDF5A171AE5D500E8DF1F /* ShakingAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A36DDF59171AE5D500E8DF1F /* ShakingAlertViewTests.m */; };
 		A3F40CD016D189F900E5FA63 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F40CCF16D189F900E5FA63 /* SenTestingKit.framework */; };
 		A3F40CD116D189F900E5FA63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
 		A3F40CD216D189F900E5FA63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
@@ -61,13 +61,13 @@
 		A33909F1160F18400083C023 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		A33909F2160F18400083C023 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		A33909F8160F18630083C023 /* ModalViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController_iPad.xib; sourceTree = "<group>"; };
-		A35C738616D197AE0069D9DF /* ShakingAlertViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertViewTests.m; sourceTree = "<group>"; };
 		A36DDF50171AE1C600E8DF1F /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = b64.h; path = ../../src/b64.h; sourceTree = "<group>"; };
 		A36DDF51171AE1C600E8DF1F /* b64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = b64.m; path = ../../src/b64.m; sourceTree = "<group>"; };
 		A36DDF52171AE1C600E8DF1F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "../../src/NSData+Base64.h"; sourceTree = "<group>"; };
 		A36DDF53171AE1C600E8DF1F /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "../../src/NSData+Base64.m"; sourceTree = "<group>"; };
 		A36DDF56171AE1CE00E8DF1F /* ShakingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShakingAlertView.h; path = ../../src/ShakingAlertView.h; sourceTree = "<group>"; };
 		A36DDF57171AE1CE00E8DF1F /* ShakingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakingAlertView.m; path = ../../src/ShakingAlertView.m; sourceTree = "<group>"; };
+		A36DDF59171AE5D500E8DF1F /* ShakingAlertViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakingAlertViewTests.m; sourceTree = "<group>"; };
 		A3F40CCE16D189F900E5FA63 /* ShakingAlertViewKiwiTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakingAlertViewKiwiTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F40CCF16D189F900E5FA63 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A3F40CD516D189F900E5FA63 /* ShakingAlertViewKiwiTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakingAlertViewKiwiTest-Info.plist"; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		A3F40CD316D189F900E5FA63 /* ShakingAlertViewKiwiTest */ = {
 			isa = PBXGroup;
 			children = (
-				A35C738616D197AE0069D9DF /* ShakingAlertViewTests.m */,
+				A36DDF59171AE5D500E8DF1F /* ShakingAlertViewTests.m */,
 				A3F40CD416D189F900E5FA63 /* Supporting Files */,
 			);
 			path = ShakingAlertViewKiwiTest;
@@ -361,7 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A35C738716D197AE0069D9DF /* ShakingAlertViewTests.m in Sources */,
+				A36DDF5A171AE5D500E8DF1F /* ShakingAlertViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
