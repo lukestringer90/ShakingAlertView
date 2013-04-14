@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A325594E16D18C3C00C675D0 /* TestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A325594D16D18C3C00C675D0 /* TestSpec.m */; };
 		A33909D1160F17D80083C023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D0160F17D80083C023 /* UIKit.framework */; };
 		A33909D3160F17D80083C023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D2160F17D80083C023 /* Foundation.framework */; };
 		A33909D5160F17D80083C023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33909D4160F17D80083C023 /* CoreGraphics.framework */; };
@@ -44,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		94B96CAED3054CEE8D07B941 /* Pods-ShakingAlertViewKiwiTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakingAlertViewKiwiTest.xcconfig"; path = "Pods/Pods-ShakingAlertViewKiwiTest.xcconfig"; sourceTree = SOURCE_ROOT; };
-		A325594D16D18C3C00C675D0 /* TestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSpec.m; sourceTree = "<group>"; };
 		A33909CC160F17D80083C023 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33909D0160F17D80083C023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A33909D2160F17D80083C023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -207,7 +205,6 @@
 		A3F40CD316D189F900E5FA63 /* ShakingAlertViewKiwiTest */ = {
 			isa = PBXGroup;
 			children = (
-				A325594D16D18C3C00C675D0 /* TestSpec.m */,
 				A35C738616D197AE0069D9DF /* ShakingAlertViewTests.m */,
 				A3F40CD416D189F900E5FA63 /* Supporting Files */,
 			);
@@ -364,7 +361,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A325594E16D18C3C00C675D0 /* TestSpec.m in Sources */,
 				A35C738716D197AE0069D9DF /* ShakingAlertViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
