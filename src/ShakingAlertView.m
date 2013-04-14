@@ -124,7 +124,6 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
     // Pad out the left side of the view to properly inset the text
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 6, 19)];
     passwordField.leftView = paddingView;
-    [paddingView release];
     passwordField.leftViewMode = UITextFieldViewModeAlways;
     
     // Set delegate
@@ -132,7 +131,6 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
     
     // Set as property
     self.passwordField = passwordField;
-    [passwordField release];
 
     // Add to subview
     [self addSubview:_passwordField];
@@ -200,6 +198,7 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             // Dismiss with success
             [alertView dismissWithClickedButtonIndex:ShakingAlertViewButtonIndexSuccess animated:YES];
+            
         }
         
         // If incorrect then animate
@@ -275,7 +274,6 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
             NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
-            [pwHashData release];
             
             return [hashedEnteredPassword isEqualToString:_password];
 
@@ -292,7 +290,6 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
             
             NSData *pwHashData = [[NSData alloc] initWithBytes:digest length:CC_MD5_DIGEST_LENGTH];
             NSString *hashedEnteredPassword = [pwHashData base64EncodedString];
-            [pwHashData release];
             
             return [hashedEnteredPassword isEqualToString:_password];
             
@@ -310,14 +307,6 @@ onDismissalWithoutPassword:(void(^)())dismissalWithoutPasswordBlock {
 }
 
 #pragma mark - Memory Managment
-- (void)dealloc {
-    [_passwordField release];
-    [_password release];
-    [_onCorrectPassword release];
-    [_onDismissalWithoutPassword release];
-    
-    [super dealloc];
-}
 
 
 @end

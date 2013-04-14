@@ -40,7 +40,7 @@ typedef enum {
 
 @interface ShakingAlertView : UIAlertView <UITextFieldDelegate>
 
-@property (nonatomic, retain) NSString *password;
+@property (nonatomic, strong) NSString *password;
 
 @property (nonatomic, copy) void(^onCorrectPassword)();
 @property (nonatomic, copy) void(^onDismissalWithoutPassword)();

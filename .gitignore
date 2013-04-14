@@ -1,2 +1,10 @@
 .DS_Store
 *.xcodeproj/project.xcworkspace/*
+
+Example Project/Pods/*
+*/xcuserdata/*
+*.xcuserstate
+*.xcsettings
+*.xcscheme
+*.xcuserdatad
+*.xcbkptlist

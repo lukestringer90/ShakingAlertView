@@ -37,7 +37,6 @@
     
     // Show and release
     [shakingAlert show];
-    [shakingAlert release];
     
 }
 
@@ -66,7 +65,6 @@
     
     // Show and release
     [shakingAlert show];
-    [shakingAlert release];
     
 }
 
@@ -92,7 +90,6 @@
     
     // Show and release
     [shakingAlert show];
-    [shakingAlert release];
 }
 
 #pragma mark - Others
@@ -110,8 +107,6 @@
     navController.modalPresentationStyle = UIModalPresentationFormSheet;
     
     [self presentModalViewController:navController animated:YES];
-    [navController release];
-    [modalVC release];
 
 }
 
@@ -123,7 +118,6 @@
                           cancelButtonTitle:@"No"
                           otherButtonTitles:@"Yes", nil];
     [alert show];
-    [alert release];
 }
 
 #pragma mark - UIAlertViewDelegate
