@@ -31,7 +31,7 @@ shakingAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
 [shakingAlert show];
 ```
 
-Rather than using a delegate, pass the instance a completion block to be executed for correct password entry and alert dismissal.
+Rather than using a delegate, pass the instance a completion block to be executed for correct password entry and alert dismissal. ShakingAlertView uses ARC so no need to release you instances.
 
 ### Hashed passwords
 
@@ -57,7 +57,7 @@ typedef enum {
 `HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` and `initWithAlertTitle:checkForPassword:onCorrectPassword:onDismissalWithoutPassword` constructors. Here the entered string is compared with the specified plaintext password using a simple `isEqualToString:`  evaluation.
 
 ## Running the tests
-The ShakingAlertView class is testing using the BDD tool [Kiwi](https://github.com/allending/Kiwi). To run the tests install Kiwi via [Cocoapods](http://cocoapods.org), and the open the workspace: 
+The ShakingAlertView class is tested using the BDD tool [Kiwi](https://github.com/allending/Kiwi). To run the tests install Kiwi via [Cocoapods](http://cocoapods.org), and the open the workspace: 
 
 ```
 cd Example\ Project/
