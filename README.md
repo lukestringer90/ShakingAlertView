@@ -8,7 +8,7 @@ ShakingAlertView is a UIAlertView subclass with a password entry textfield. Inco
 [Video Demo](https://github.com/stringer630/ShakingAlertView/blob/master/screens/video_demo.mov?raw=true)
 
 ## Installation
-Drag the `ShakingAlertView/` folder into your project. This contains the UI components and cryptographic helpers necessary for hashing passwords.
+Drag the **"src"** folder into your project. This contains the UI components and cryptographic helpers necessary for hashing passwords.
 
 ## Usage
 ### Plaintext password
@@ -29,7 +29,6 @@ shakingAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
 }];
 
 [shakingAlert show];
-[shakingAlert release];
 ```
 
 Rather than using a delegate, pass the instance a completion block to be executed for correct password entry and alert dismissal.
@@ -57,8 +56,21 @@ typedef enum {
 
 `HashTechniqueNone` is used if no technique is specified, like in the `initWithAlertTitle:checkForPassword` and `initWithAlertTitle:checkForPassword:onCorrectPassword:onDismissalWithoutPassword` constructors. Here the entered string is compared with the specified plaintext password using a simple `isEqualToString:`  evaluation.
 
+## Running the tests
+The ShakingAlertView class is testing using the BDD tool [Kiwi](https://github.com/allending/Kiwi). To run the tests install Kiwi via [Cocoapods](http://cocoapods.org), and the open the workspace: 
+
+```
+cd Example\ Project/
+pod install
+open ExampleProject.xcworkspace/
+````
+
+Make sure the **"ShakingAlertView"** scheme is selected then run the tests with **⌘+U**
+
 ## Acknowledgements
 `NSData+Base64.h/m` and `b64.h/m` from [aqtoolkit](https://github.com/AlanQuatermain/aqtoolkit) by [Jim Dovey](https://github.com/AlanQuatermain)
+
+[Kiwi](https://github.com/allending/Kiwi) testing tool.
 
 ## Licence
 This code is distributed under the terms and conditions of the MIT license.
