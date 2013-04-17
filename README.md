@@ -31,7 +31,7 @@ shakingAlert = [[ShakingAlertView alloc] initWithAlertTitle:@"Enter Password"
 [shakingAlert show];
 ```
 
-Rather than using a delegate, pass the instance a completion block to be executed for correct password entry and alert dismissal. ShakingAlertView uses ARC so no need to release you instances.
+Rather than using a delegate, pass the instance a completion block to be executed for correct password entry and alert dismissal. ShakingAlertView uses ARC so no need to release your instances.
 
 ### Hashed passwords
 
