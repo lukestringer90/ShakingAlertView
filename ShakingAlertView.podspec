@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.author       = { "Luke Stringer" => "luke.stringer@me.com" }
   s.source       = { :git => "https://github.com/stringer630/ShakingAlertView.git", :tag => "1.0.0" }
   s.ios.deployment_target = '5.0'
-  s.source_files = 'src', ''
+  s.source_files = 'src'
   s.requires_arc = true
 end
