@@ -8,14 +8,14 @@ ShakingAlertView is a UIAlertView subclass with a password entry textfield. Inco
 [Video Demo](https://github.com/stringer630/ShakingAlertView/blob/master/screens/video_demo.mov?raw=true)
 
 ## Installation
-## Cocoapods
+### Cocoapods
 Add to your Podfile: 
 
 ```
 pod 'ShakingAlertView'
 ```
 
-## Adding source code manually
+### Adding source code manually
 Clone the git repo and drag the **"src"** folder into your project. This contains the UI components and cryptographic helpers necessary for hashing passwords.
 
 ## Usage
