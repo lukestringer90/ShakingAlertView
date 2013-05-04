@@ -206,7 +206,7 @@ describe(@"ShakingAlertView", ^{
                                                            checkForPassword:password onCorrectPassword:^{
                                                                successReached = YES;
                                                            } onDismissalWithoutPassword:^{
-                                                               failureReached = NO;
+                                                               failureReached = YES;
                                                            }];
             [shakingAlertView show];
             
@@ -272,7 +272,7 @@ describe(@"ShakingAlertView", ^{
                                                            checkForPassword:password onCorrectPassword:^{
                                                                successReached = YES;
                                                            } onDismissalWithoutPassword:^{
-                                                               failureReached = NO;
+                                                               failureReached = YES;
                                                            }];
             [shakingAlertView show];
             
@@ -368,7 +368,7 @@ describe(@"ShakingAlertView", ^{
                                                           onCorrectPassword:^{
                                                                successReached = YES;
                                                            } onDismissalWithoutPassword:^{
-                                                               failureReached = NO;
+                                                               failureReached = YES;
                                                            }];
             [shakingAlertView show];
             
@@ -465,7 +465,7 @@ describe(@"ShakingAlertView", ^{
                                                           onCorrectPassword:^{
                                                               successReached = YES;
                                                           } onDismissalWithoutPassword:^{
-                                                              failureReached = NO;
+                                                              failureReached = YES;
                                                           }];
             [shakingAlertView show];
             
