@@ -218,7 +218,7 @@ describe(@"ShakingAlertView", ^{
             
             // Neither of the completion blocks should have been called
             [[theValue(successReached) should] beFalse];
-            [[theValue(successReached) should] beFalse];
+            [[theValue(failureReached) should] beFalse];
         });
     });
     // context end
@@ -284,7 +284,7 @@ describe(@"ShakingAlertView", ^{
             
             // Neither of the completion blocks should have been called
             [[theValue(successReached) should] beFalse];
-            [[theValue(successReached) should] beFalse];
+            [[theValue(failureReached) should] beFalse];
         });
     });
     
@@ -380,7 +380,7 @@ describe(@"ShakingAlertView", ^{
             
             // Neither of the completion blocks should have been called
             [[theValue(successReached) should] beFalse];
-            [[theValue(successReached) should] beFalse];
+            [[theValue(failureReached) should] beFalse];
         });
 
         
@@ -477,7 +477,7 @@ describe(@"ShakingAlertView", ^{
             
             // Neither of the completion blocks should have been called
             [[theValue(successReached) should] beFalse];
-            [[theValue(successReached) should] beFalse];
+            [[theValue(failureReached) should] beFalse];
         });
 
 
