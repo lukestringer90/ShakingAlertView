@@ -4,5 +4,4 @@
 Example Project/Pods/*
 *.xcuserstate
 *.xcsettings
-*.xcuserdatad
 *.xcbkptlist
