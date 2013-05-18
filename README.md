@@ -1,6 +1,8 @@
 ShakingAlertView
 ===================
 
+[![Build Status](https://travis-ci.org/lukestringer90/ShakingAlertView.png?branch=master)](https://travis-ci.org/lukestringer90/ShakingAlertView)
+
 ShakingAlertView is a UIAlertView subclass with a password entry textfield. Incorrect password entry causes a "shake" animation similar to the OS X account login screen.
 
 ![screen](https://github.com/stringer630/ShakingAlertView/blob/master/screens/screen0.png?raw=true)
