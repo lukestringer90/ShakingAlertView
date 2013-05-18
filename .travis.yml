@@ -2,5 +2,5 @@ language: objective-c
 before_install:
   - brew update
   - brew install xctool
-  - cd Exmaple\ Project
+  - cd Example\ Project
 script: xctool test -project ExampleProject.xcodeproj/ -scheme ShakingAlertView
