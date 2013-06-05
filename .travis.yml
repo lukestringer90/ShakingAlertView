@@ -3,4 +3,5 @@ before_install:
   - brew update
   - brew install xctool
   - cd Example\ Project
+  - pod install
 script: xctool test -project ExampleProject.xcodeproj/ -scheme ShakingAlertView
