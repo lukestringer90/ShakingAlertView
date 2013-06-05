@@ -509,7 +509,6 @@
 				GCC_PREFIX_HEADER = "ShakingAlertViewKiwiTest/ShakingAlertViewKiwiTest-Prefix.pch";
 				INFOPLIST_FILE = "ShakingAlertViewKiwiTest/ShakingAlertViewKiwiTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
