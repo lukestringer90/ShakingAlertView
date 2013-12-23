@@ -1,0 +1,5 @@
+language: objective-c
+
+script:
+  - xctool -workspace Project/LJSShakingAlertView.xcworkspace -scheme LJSShakingAlertView -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool test -workspace Project/LJSShakingAlertView.xcworkspace -scheme LJSShakingAlertView -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

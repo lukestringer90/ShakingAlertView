@@ -1,0 +1,11 @@
+language: objective-c
+
+script:
+  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+  - brew update
+  - brew uninstall xctool
+  - brew install xctool --HEAD
+  - cd Project
+  - pod install
+  - xctool -workspace LJSShakingAlertView.xcworkspace -scheme LJSShakingAlertView -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool test -workspace LJSShakingAlertView.xcworkspace -scheme LJSShakingAlertView -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
