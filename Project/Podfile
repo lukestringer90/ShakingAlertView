@@ -1,4 +1,4 @@
-pod "ShakingAlertView", :path => "../"
+pod “LJSShakingAlertView", :path => "../"
 
 target "Demo" do
 end
