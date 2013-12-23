@@ -1,12 +1,13 @@
 //
 //  LJSShakingAlertViewTests.m
-//  LJSShakingAlertViewTests
+//  LJSShakingAlertView
 //
 //  Created by Luke Stringer on 23/12/2013.
 //  Copyright (c) 2013 Luke James Stringer. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import <LJSShakingAlertView/LJSShakingAlertView.h>
 
 @interface LJSShakingAlertViewTests : XCTestCase
 
@@ -14,21 +15,23 @@
 
 @implementation LJSShakingAlertViewTests
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)testInitialisesWithStoredProperties {
+    void (^completion)(BOOL entryWasCorrect) = ^void(BOOL entryWasCorrect) {};
+    
+    LJSShakingAlertView *sut = [[LJSShakingAlertView alloc] initWithTitle:@"Title"
+                                                                  message:@"Message."
+                                                               secretText:@"password"
+                                                               completion:completion
+                                                        cancelButtonTitle:@"Cancel"
+                                                         otherButtonTitle:@"OK"];
+    
+    XCTAssertNotNil(sut, @"");
+    XCTAssertEqualObjects(sut.title, @"Title", @"");
+    XCTAssertEqualObjects(sut.message, @"Message.", @"");
+    XCTAssertEqualObjects(sut.secretText, @"password", @"");
+    XCTAssertEqualObjects(sut.completionHandler, completion, @"");
+    XCTAssertEqualObjects(sut.cancelButtonTitle, @"Cancel", @"");
+    XCTAssertEqualObjects(sut.otherButtonTitle, @"OK", @"");
 }
 
 @end

@@ -34,6 +34,13 @@
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
+		<key>0716E66A6A144D07B4185EC4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6123AD62C8FB4B6FAAA02B09</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>59D7473CAA074983A3A76EC0</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -61,6 +68,30 @@
 			<string>libPods.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9BE8EE6347024BAEA911C4CC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>A31031BC1868C0F40024AB8C</key>
 		<dict>
@@ -334,6 +365,8 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Demo</string>
 			<key>path</key>
 			<string>LJSShakingAlertView</string>
 			<key>sourceTree</key>
@@ -576,7 +609,7 @@
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>A31031F71868C0F40024AB8C</string>
+				<string>A31032051868C6360024AB8C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -592,6 +625,7 @@
 				<string>A31031EB1868C0F40024AB8C</string>
 				<string>A31031ED1868C0F40024AB8C</string>
 				<string>A31031EC1868C0F40024AB8C</string>
+				<string>0716E66A6A144D07B4185EC4</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -617,9 +651,11 @@
 			<string>A31031FD1868C0F40024AB8C</string>
 			<key>buildPhases</key>
 			<array>
+				<string>BFAF2A816D1D47A3ADCDA1FD</string>
 				<string>A31031E51868C0F40024AB8C</string>
 				<string>A31031E61868C0F40024AB8C</string>
 				<string>A31031E71868C0F40024AB8C</string>
+				<string>9BE8EE6347024BAEA911C4CC</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -711,11 +747,13 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>A31031F61868C0F40024AB8C</string>
 				<string>A31031F11868C0F40024AB8C</string>
+				<string>A31032041868C6360024AB8C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Tests</string>
 			<key>path</key>
 			<string>LJSShakingAlertViewTests</string>
 			<key>sourceTree</key>
@@ -776,24 +814,6 @@
 		<dict>
 			<key>fileRef</key>
 			<string>A31031F31868C0F40024AB8C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A31031F61868C0F40024AB8C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LJSShakingAlertViewTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A31031F71868C0F40024AB8C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A31031F61868C0F40024AB8C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -947,6 +967,8 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -1011,11 +1033,15 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>A31031FE1868C0F40024AB8C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>59D7473CAA074983A3A76EC0</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ARCHS</key>
@@ -1053,6 +1079,8 @@
 		</dict>
 		<key>A31031FF1868C0F40024AB8C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>59D7473CAA074983A3A76EC0</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ARCHS</key>
@@ -1083,12 +1111,62 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>A31032041868C6360024AB8C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LJSShakingAlertViewTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A31032051868C6360024AB8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A31032041868C6360024AB8C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>A808AEB15B784CB895FF859D</key>
 		<dict>
 			<key>fileRef</key>
 			<string>6123AD62C8FB4B6FAAA02B09</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>BFAF2A816D1D47A3ADCDA1FD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>CEC0D16F41A34588BCD66722</key>
 		<dict>
