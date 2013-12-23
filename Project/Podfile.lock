@@ -1,0 +1,14 @@
+PODS:
+  - LJSShakingAlertView (2.0.0)
+
+DEPENDENCIES:
+  - LJSShakingAlertView (from `../`)
+
+EXTERNAL SOURCES:
+  LJSShakingAlertView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LJSShakingAlertView: cb6ee9d815380510f004281f91e33dbb373ee05d
+
+COCOAPODS: 0.28.0
