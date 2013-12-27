@@ -29,6 +29,7 @@
               cancelButtonTitle:cancelButtonTitle
               otherButtonTitles:otherButtonTitle, nil];
     if (self) {
+        self.alertViewStyle = UIAlertViewStyleSecureTextInput;
         self.secretText = secretText;
         self.completionHandler = completion;
         self.cancelButtonTitle = cancelButtonTitle;
