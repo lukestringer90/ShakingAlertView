@@ -1,8 +1,10 @@
 PODS:
   - LJSShakingAlertView (2.0.0)
+  - OCMock (2.2.2)
 
 DEPENDENCIES:
   - LJSShakingAlertView (from `../`)
+  - OCMock (~> 2.2.2)
 
 EXTERNAL SOURCES:
   LJSShakingAlertView:
@@ -10,5 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   LJSShakingAlertView: cb6ee9d815380510f004281f91e33dbb373ee05d
+  OCMock: ffba68873fd32cfd35d885bddad23bfa816da4a3
 
-COCOAPODS: 0.28.0
+COCOAPODS: 0.29.0

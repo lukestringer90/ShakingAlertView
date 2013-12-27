@@ -69,6 +69,41 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
+		<key>6FCD6D8329C04F5BBB5E5F99</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-LJSShakingAlertViewTests.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-LJSShakingAlertViewTests.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7046E6A4C2674F0F8A10F977</key>
+		<dict>
+			<key>fileRef</key>
+			<string>72725B2BEFEA479EB6F7A061</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>72725B2BEFEA479EB6F7A061</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-LJSShakingAlertViewTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>9BE8EE6347024BAEA911C4CC</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -88,7 +123,7 @@
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+			<string>"${SRCROOT}/Pods/Pods-LJSShakingAlertViewTests-resources.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
@@ -102,6 +137,7 @@
 				<string>A31031C71868C0F40024AB8C</string>
 				<string>A31031C61868C0F40024AB8C</string>
 				<string>59D7473CAA074983A3A76EC0</string>
+				<string>6FCD6D8329C04F5BBB5E5F99</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -282,6 +318,7 @@
 				<string>A31031CC1868C0F40024AB8C</string>
 				<string>A31031EA1868C0F40024AB8C</string>
 				<string>6123AD62C8FB4B6FAAA02B09</string>
+				<string>72725B2BEFEA479EB6F7A061</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -626,6 +663,7 @@
 				<string>A31031ED1868C0F40024AB8C</string>
 				<string>A31031EC1868C0F40024AB8C</string>
 				<string>0716E66A6A144D07B4185EC4</string>
+				<string>7046E6A4C2674F0F8A10F977</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -1041,7 +1079,7 @@
 		<key>A31031FE1868C0F40024AB8C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>59D7473CAA074983A3A76EC0</string>
+			<string>6FCD6D8329C04F5BBB5E5F99</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ARCHS</key>
@@ -1080,7 +1118,7 @@
 		<key>A31031FF1868C0F40024AB8C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>59D7473CAA074983A3A76EC0</string>
+			<string>6FCD6D8329C04F5BBB5E5F99</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ARCHS</key>

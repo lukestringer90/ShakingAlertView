@@ -11,7 +11,7 @@
 @interface LJSShakingAlertView : UIAlertView
 
 @property (nonatomic, strong, readonly) NSString *secretText;
-@property (nonatomic, copy, readonly) void (^completionHandler)(BOOL entryWasCorrect);
+@property (nonatomic, copy, readonly) void (^completionHandler)(BOOL textEntryWasCorrect);
 @property (nonatomic, strong, readonly) NSString *cancelButtonTitle;
 @property (nonatomic, strong, readonly) NSString *otherButtonTitle;
 

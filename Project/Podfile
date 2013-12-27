@@ -1,3 +1,7 @@
 link_with "LJSShakingAlertView", "LJSShakingAlertViewTests"
 
 pod "LJSShakingAlertView", :path => "../"
+
+target :LJSShakingAlertViewTests, :exclusive => true do
+    pod 'OCMock', '~> 2.2.2'
+end

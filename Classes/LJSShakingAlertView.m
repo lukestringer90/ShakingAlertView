@@ -8,26 +8,31 @@
 
 #import "LJSShakingAlertView.h"
 
-@interface LJSShakingAlertView ()
+@interface LJSShakingAlertView () <UIAlertViewDelegate>
 @property (nonatomic, strong, readwrite) NSString *secretText;
-@property (nonatomic, copy, readwrite) void (^completionHandler)(BOOL entryWasCorrect);
+@property (nonatomic, copy, readwrite) void (^completionHandler)(BOOL textEntryWasCorrect);
 @property (nonatomic, strong, readwrite) NSString *cancelButtonTitle;
 @property (nonatomic, strong, readwrite) NSString *otherButtonTitle;
 @end
 
 @implementation LJSShakingAlertView
 
-- initWithTitle:(NSString *)title
-                         message:(NSString *)message
-                      secretText:(NSString *)secretText
-                      completion:(void(^)(BOOL entryWasCorrect))completion
-               cancelButtonTitle:(NSString *)cancelButtonTitle
-                otherButtonTitle:(NSString *)otherButtonTitle {
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+                   secretText:(NSString *)secretText
+                   completion:(void(^)(BOOL textEntryWasCorrect))completion
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+             otherButtonTitle:(NSString *)otherButtonTitle {
+    if (!secretText) {
+        return nil;
+    }
+    
     self = [super initWithTitle:title
                         message:message
                        delegate:self
               cancelButtonTitle:cancelButtonTitle
               otherButtonTitles:otherButtonTitle, nil];
+    
     if (self) {
         self.alertViewStyle = UIAlertViewStyleSecureTextInput;
         self.secretText = secretText;
@@ -36,6 +41,18 @@
         self.otherButtonTitle = otherButtonTitle;
     }
     return self;
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([[self buttonTitleAtIndex:buttonIndex] isEqualToString:self.otherButtonTitle]) {
+        UITextField *secureTextField = [self textFieldAtIndex:0];
+        BOOL textEntryWasCorrect = [secureTextField.text isEqualToString:self.secretText];
+        if (self.completionHandler) {
+            self.completionHandler(textEntryWasCorrect);
+        }
+    }
 }
 
 @end
