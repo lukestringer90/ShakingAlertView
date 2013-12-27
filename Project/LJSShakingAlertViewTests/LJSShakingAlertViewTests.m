@@ -116,6 +116,27 @@
     
     XCTAssertTrue(completionBlockWasCalled, @"");
     XCTAssertFalse(capturedTextEntryWasCorrectValue, @"");
+}
+
+- (void)testCallsCompletionHandlerWhenDismissed {
+    __block BOOL completionBlockWasCalled;
+    __block BOOL capturedTextEntryWasCorrectValue;
+    _sut = [[LJSShakingAlertView alloc] initWithTitle:@"Title"
+                                              message:@"Message."
+                                           secretText:@"password"
+                                           completion:^void(BOOL textEntryWasCorrect) {
+                                               completionBlockWasCalled = YES;
+                                               capturedTextEntryWasCorrectValue = textEntryWasCorrect;
+                                           }
+                                    cancelButtonTitle:@"Cancel"
+                                     otherButtonTitle:@"OK"];
+    
+    
+    // "tap Cancel button"
+    [_sut alertView:_sut clickedButtonAtIndex:_sut.cancelButtonIndex];
+    
+    XCTAssertTrue(completionBlockWasCalled, @"");
+    XCTAssertFalse(capturedTextEntryWasCorrectValue, @"");
 
 }
 

@@ -46,12 +46,18 @@
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if ([[self buttonTitleAtIndex:buttonIndex] isEqualToString:self.otherButtonTitle]) {
+    BOOL textEntryWasCorrect;
+    
+    if (self.cancelButtonIndex == buttonIndex) {
+        textEntryWasCorrect = NO;
+    }
+    else {
         UITextField *secureTextField = [self textFieldAtIndex:0];
-        BOOL textEntryWasCorrect = [secureTextField.text isEqualToString:self.secretText];
-        if (self.completionHandler) {
-            self.completionHandler(textEntryWasCorrect);
-        }
+        textEntryWasCorrect = [secureTextField.text isEqualToString:self.secretText];
+    }
+    
+    if (self.completionHandler) {
+        self.completionHandler(textEntryWasCorrect);
     }
 }
 
